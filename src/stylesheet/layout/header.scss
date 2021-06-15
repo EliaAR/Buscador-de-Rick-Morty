@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #a5ff81;
+  background-color: black;
+
+  &__img {
+    height: 100px;
+  }
+}

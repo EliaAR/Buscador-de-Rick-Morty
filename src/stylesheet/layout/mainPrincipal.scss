@@ -1,0 +1,9 @@
+.mainPrincipal {
+  background-image: url(../../images/Rick&Morty.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__characterContainer {
+    display: grid;
+  }
+}
