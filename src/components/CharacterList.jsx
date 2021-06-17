@@ -6,7 +6,7 @@ function CharacterList({ data, searchValue, species, error }) {
   return (
     <div>
       {error ? (
-        <p>{searchValue} no existe</p>
+        <p className="characterList__paragraph">{searchValue} no existe</p>
       ) : (
         <ul className="characterList__container">
           {data

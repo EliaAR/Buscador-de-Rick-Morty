@@ -1,0 +1,11 @@
+.errorRouteMsg {
+  min-height: 67vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__paragraph {
+    font-size: 50px;
+    text-align: center;
+  }
+}

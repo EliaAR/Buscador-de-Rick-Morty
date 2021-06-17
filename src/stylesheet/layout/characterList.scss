@@ -1,4 +1,12 @@
 .characterList {
+  &__paragraph {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 50px;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: 1fr;
