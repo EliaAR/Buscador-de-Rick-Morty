@@ -9,6 +9,7 @@ function SpeciesIcons({ species }) {
       <img
         src={poopy}
         alt="Poopybutthole"
+        title="Poopybutthole"
         className="icon__species icon__poopy"
       />
     );

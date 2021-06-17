@@ -19,17 +19,18 @@
     padding-top: 60px;
   }
 
+  &__paragraph {
+    background-color: #444343;
+    height: 25px;
+    text-align: center;
+  }
+
   @media (min-width: 768px) {
     &__link {
       font-size: 30px;
     }
     &__card {
       padding-top: 150px;
-    }
-    &__paragraph {
-      background-color: #444343;
-      height: 25px;
-      text-align: center;
     }
   }
 }

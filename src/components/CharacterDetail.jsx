@@ -23,10 +23,10 @@ function CharacterDetail({ data }) {
           </Link>
           <div className="characterDetail__card">
             <CharacterCard card={specificCharacter} />
-            <p className="character__paragraph">
+            <p className="characterDetail__paragraph">
               Número de episodios: {specificCharacter.episode}
             </p>
-            <p className="character__paragraph">
+            <p className="characterDetail__paragraph">
               Planeta de origen: {specificCharacter.origin}
             </p>
           </div>
