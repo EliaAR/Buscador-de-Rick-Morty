@@ -1,0 +1,35 @@
+.characterDetail {
+  &__container {
+    background-image: url(../../images/rick.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__card {
+    padding-top: 60px;
+  }
+
+  @media (min-width: 768px) {
+    &__link {
+      font-size: 30px;
+    }
+    &__card {
+      padding-top: 150px;
+    }
+    &__paragraph {
+      background-color: #444343;
+      height: 25px;
+      text-align: center;
+    }
+  }
+}

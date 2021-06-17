@@ -1,70 +1,44 @@
-import { useState, useEffect } from "react";
-import { DataAPI, DataAPIName } from "../Service/DataAPI";
+import { Link } from "react-router-dom";
 import { CharacterCard } from "./CharacterCard";
-import { Filters } from "./Filters";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import "../stylesheet/layout/mainPrincipal.scss";
+import "../stylesheet/layout/characterList.scss";
 
-function CharacterList() {
-  const [data, setData] = useState([]);
-  const [searchValue, setSearchValue] = useState([]);
-  const [species, setSpecies] = useState();
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    DataAPI().then((peopleArray) => {
-      setData(peopleArray);
-    });
-  }, []);
-
-  useEffect(() => {
-    setError(false);
-    if (searchValue) {
-      DataAPIName(searchValue)
-        .then((peopleArray) => {
-          setData(peopleArray);
-        })
-        .catch((error) => setError(true));
-    } else {
-      DataAPI().then((peopleArray) => {
-        setData(peopleArray);
-      });
-    }
-  }, [searchValue]);
-
+function CharacterList({ data, searchValue, species, error }) {
   return (
     <div>
-      <Header />
-      <main className="mainPrincipal">
-        <Filters
-          name={searchValue}
-          onChangeName={(evt) => setSearchValue(evt.currentTarget.value)}
-          data={data}
-          species={species}
-          onChangeSpecies={(evt) => setSpecies(evt.currentTarget.value)}
-        />
-        {error ? (
-          <p>{searchValue} no existe</p>
-        ) : (
-          <ul className="mainPrincipal__characterContainer">
-            {data
-              .filter((card) => {
-                if (!species) {
-                  return true;
-                } else {
-                  return species === card.species;
-                }
-              })
-              .map((card) => (
-                <li key={card.id}>
+      {error ? (
+        <p>{searchValue} no existe</p>
+      ) : (
+        <ul className="characterList__container">
+          {data
+            .filter((card) => {
+              if (!species) {
+                return true;
+              } else {
+                return species === card.species;
+              }
+            })
+            .sort(function (a, b) {
+              if (a.name > b.name) {
+                return 1;
+              }
+              if (a.name < b.name) {
+                return -1;
+              }
+              return 0;
+            })
+            .map((card) => (
+              <Link
+                to={`/characterdetails/${card.id}`}
+                key={card.id}
+                className="characterList__link"
+              >
+                <li className="characterList__item">
                   <CharacterCard card={card} />
                 </li>
-              ))}
-          </ul>
-        )}
-      </main>
-      <Footer />
+              </Link>
+            ))}
+        </ul>
+      )}
     </div>
   );
 }

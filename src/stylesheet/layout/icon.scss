@@ -1,0 +1,28 @@
+.icon {
+  &__species {
+    position: absolute;
+    margin-top: -405px;
+    margin-left: -165px;
+  }
+  &__poopy {
+    height: 35px;
+  }
+  &__status {
+    position: absolute;
+    margin-top: -405px;
+    margin-right: -160px;
+  }
+
+  @media (min-width: 768px) {
+    &__species {
+      margin-top: -595px;
+      font-size: 20px;
+      margin-right: 90px;
+    }
+    &__status {
+      margin-top: -595px;
+      font-size: 20px;
+      margin-right: -250px;
+    }
+  }
+}

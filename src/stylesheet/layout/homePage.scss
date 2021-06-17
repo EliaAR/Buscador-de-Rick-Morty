@@ -2,8 +2,7 @@
   background-image: url(../../images/Rick&Morty.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-
-  &__characterContainer {
-    display: grid;
-  }
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 68vh;
 }
