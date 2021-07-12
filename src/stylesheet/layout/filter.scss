@@ -6,41 +6,44 @@
 
   &__label {
     color: #a5ff81;
-    width: 250px;
+    width: 270px;
     text-align: center;
+    font-family: "Kalam", cursive;
   }
 
   &__input {
     border: 1px solid #a5ff81;
     border-radius: 5px;
     background-color: antiquewhite;
-    width: 250px;
+    width: 270px;
     margin: 5px;
+    font-family: "Kalam", cursive;
   }
 
   &__select {
     border: 1px solid #a5ff81;
     border-radius: 5px;
-    width: 250px;
-    margin-left: 5px;
-    margin-top: 5px;
+    width: 270px;
+    height: 21px;
+    margin: 5px;
+    font-family: "Kalam", cursive;
   }
 
   @media (min-width: 768px) {
     &__label {
-      width: 400px;
+      width: 450px;
       font-size: 25px;
     }
     &__input {
-      width: 400px;
+      width: 450px;
       margin: 5px;
-      height: 25px;
+      height: 30px;
       font-size: 20px;
     }
     &__select {
-      width: 400px;
+      width: 450px;
       margin: 5px;
-      height: 25px;
+      height: 30px;
       font-size: 20px;
     }
   }
