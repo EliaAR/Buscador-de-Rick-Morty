@@ -26,7 +26,7 @@ function CharacterDetail({ data }) {
             <p className="characterDetail__paragraph">
               Número de episodios: {specificCharacter.episode}
             </p>
-            <p className="characterDetail__paragraph">
+            <p className="characterDetail__paragraph characterDetail__planet">
               Planeta de origen: {specificCharacter.origin}
             </p>
           </div>

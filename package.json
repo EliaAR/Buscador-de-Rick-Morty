@@ -1,6 +1,6 @@
 {
-  "homepage":"./",
-  "name": "modulo-3-evaluacion-final-eliaar",
+  "homepage": "./",
+  "name": "buscador-rick-and-morty",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
