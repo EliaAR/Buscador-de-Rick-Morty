@@ -11,6 +11,8 @@ function HomePage({
   species,
   onChangeSpecies,
   error,
+  status,
+  onChangeStatus,
 }) {
   return (
     <>
@@ -22,12 +24,15 @@ function HomePage({
           data={data}
           species={species}
           onChangeSpecies={onChangeSpecies}
+          status={status}
+          onChangeStatus={onChangeStatus}
         />
         <CharacterList
           data={data}
           searchValue={searchValue}
           species={species}
           error={error}
+          status={status}
         />
       </main>
       <Footer />

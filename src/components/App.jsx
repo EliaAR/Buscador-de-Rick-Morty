@@ -1,6 +1,6 @@
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { DataAPI, DataAPIName } from "../Service/DataAPI";
+import { DataAPI } from "../Service/DataAPI";
 import { HomePage } from "./HomePage";
 import { CharacterDetail } from "./CharacterDetail";
 import { ErrorRouteMsg } from "./ErrorRouteMsg";
@@ -15,24 +15,18 @@ function App() {
   const [data, setData] = useState(defaultData);
   const [searchValue, setSearchValue] = useState(defaultSearchValue);
   const [species, setSpecies] = useState(defaultSpecies);
+  const [status, setStatus] = useState("");
   const [error, setError] = useState(false);
 
   useEffect(() => {
     setError(false);
-    if (searchValue) {
-      DataAPIName(searchValue)
-        .then((characterArray) => {
-          setData(characterArray);
-          SetLocalStorage("characterArray", characterArray);
-        })
-        .catch((error) => setError(true));
-    } else {
-      DataAPI().then((characterArray) => {
+    DataAPI({ name: searchValue, species, status })
+      .then((characterArray) => {
         setData(characterArray);
         SetLocalStorage("characterArray", characterArray);
-      });
-    }
-  }, [searchValue]);
+      })
+      .catch((error) => setError(true));
+  }, [searchValue, species, status]);
 
   return (
     <Router>
@@ -53,6 +47,8 @@ function App() {
                 setSpecies(evt.currentTarget.value);
                 SetLocalStorage("species", evt.currentTarget.value);
               }}
+              status={status}
+              onChangeStatus={(evt) => setStatus(evt.currentTarget.value)}
               error={error}
             />
           }

@@ -1,9 +1,8 @@
 .icon {
   &__species {
     position: absolute;
-    margin-top: -405px;
-    margin-left: -165px;
-    color: black;
+    margin-left: -155px;
+    color: #444343;
   }
   &__poopy {
     height: 35px;
@@ -14,19 +13,16 @@
   }
   &__status {
     position: absolute;
-    margin-top: -405px;
     margin-right: -160px;
-    color: black;
+    color: #444343;
   }
 
   @media (min-width: 768px) {
     &__species {
-      margin-top: -595px;
       font-size: 20px;
       margin-right: 90px;
     }
     &__status {
-      margin-top: -595px;
       font-size: 20px;
       margin-right: -250px;
     }

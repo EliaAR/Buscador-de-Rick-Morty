@@ -1,10 +1,21 @@
 .characterList {
   &__paragraph {
     color: white;
+    background-color: rgba(0, 0, 0, 0.75);
     font-size: 20px;
+    font-weight: bold;
     text-align: center;
-    text-transform: uppercase;
-    padding-top: 50px;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &__text {
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 10px;
+    text-transform: none;
   }
 
   &__container {
@@ -23,6 +34,13 @@
   }
 
   @media (min-width: 768px) {
+    &__paragraph {
+      font-size: 50px;
+      margin-top: 130px;
+    }
+    &__text {
+      font-size: 40px;
+    }
     &__container {
       grid-template-columns: 1fr 1fr;
     }

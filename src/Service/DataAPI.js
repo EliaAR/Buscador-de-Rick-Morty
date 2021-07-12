@@ -1,25 +1,10 @@
-function DataAPI() {
+function DataAPI(params = {}) {
   const ENDPOINT = "https://rickandmortyapi.com/api/character";
-  return fetch(ENDPOINT)
-    .then((response) => response.json())
-    .then((response) =>
-      response.results.map((character) => {
-        return {
-          id: character.id,
-          name: character.name,
-          status: character.status,
-          species: character.species,
-          image: character.image,
-          episode: character.episode.length,
-          origin: character.origin.name,
-        };
-      })
-    );
-}
-
-function DataAPIName(name) {
-  const ENDPOINT = "https://rickandmortyapi.com/api/character/?name=";
-  return fetch(ENDPOINT + name)
+  const searchParams = new URLSearchParams();
+  for (let fieldName in params) {
+    searchParams.append(fieldName, params[fieldName]);
+  }
+  return fetch(ENDPOINT + "?" + searchParams.toString())
     .then((response) => response.json())
     .then((response) =>
       response.results.map((character) => {
@@ -37,4 +22,3 @@ function DataAPIName(name) {
 }
 
 export { DataAPI };
-export { DataAPIName };

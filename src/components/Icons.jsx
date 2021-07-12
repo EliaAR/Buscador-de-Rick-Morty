@@ -56,7 +56,7 @@ function SpeciesIcons({ species }) {
 function StatusIcons({ status }) {
   if (status === "Alive") {
     return <i className="fas fa-heartbeat icon__status" title="Alive"></i>;
-  } else if (status === "dead") {
+  } else if (status === "Dead") {
     return (
       <i className="fas fa-skull-crossbones icon__status" title="Dead"></i>
     );

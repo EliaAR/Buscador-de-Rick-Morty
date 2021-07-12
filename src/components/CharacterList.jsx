@@ -2,11 +2,18 @@ import { Link } from "react-router-dom";
 import { CharacterCard } from "./CharacterCard";
 import "../stylesheet/layout/characterList.scss";
 
-function CharacterList({ data, searchValue, species, error }) {
+function CharacterList({ data, searchValue, species, error, status }) {
   return (
     <div>
       {error ? (
-        <p className="characterList__paragraph">{searchValue} no existe</p>
+        <div className="characterList__paragraph">
+          <p>
+            {searchValue}, {species}, {status}{" "}
+          </p>
+          <p className="characterList__text">
+            No se encuentra en la Base de datos
+          </p>
+        </div>
       ) : (
         <ul className="characterList__container">
           {data
@@ -15,6 +22,13 @@ function CharacterList({ data, searchValue, species, error }) {
                 return true;
               } else {
                 return species === card.species;
+              }
+            })
+            .filter((card) => {
+              if (!status) {
+                return true;
+              } else {
+                return status === card.status;
               }
             })
             .sort(function (a, b) {
