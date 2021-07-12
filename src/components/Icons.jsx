@@ -1,5 +1,6 @@
 import "../stylesheet/layout/icon.scss";
-import poopy from "../images/poopy.png";
+import poopyShadow from "../images/poopyShadow.png";
+import cronenbergSilu from "../images/cronenbergSilu.png";
 
 function SpeciesIcons({ species }) {
   if (species === "Human") {
@@ -7,7 +8,7 @@ function SpeciesIcons({ species }) {
   } else if (species === "Poopybutthole") {
     return (
       <img
-        src={poopy}
+        src={poopyShadow}
         alt="Poopybutthole"
         title="Poopybutthole"
         className="icon__species icon__poopy"
@@ -35,6 +36,15 @@ function SpeciesIcons({ species }) {
   } else if (species === "Planet") {
     return (
       <i className="fas fa-globe-americas icon__species" title="Planet"></i>
+    );
+  } else if (species === "Cronenberg") {
+    return (
+      <img
+        src={cronenbergSilu}
+        alt="Cronenberg"
+        title="Cronenberg"
+        className="icon__species icon__cronenberg"
+      />
     );
   } else {
     return (
