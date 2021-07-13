@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 15vh;
+  min-height: 10vh;
   border-top: 1px solid #a5ff81;
   background-color: black;
 
   &__img {
-    height: 70px;
+    height: 30px;
   }
 
   &__small {

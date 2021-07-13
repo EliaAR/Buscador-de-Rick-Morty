@@ -35,7 +35,15 @@ function CharacterDetail({ data }) {
       </>
     );
   } else {
-    return <p>Personaje no encontrado</p>;
+    return (
+      <>
+        <Header />
+        <main className="characterDetail__errorMsg">
+          <p className="characterDetail__pError">Personaje no encontrado</p>
+        </main>
+        <Footer />
+      </>
+    );
   }
 }
 

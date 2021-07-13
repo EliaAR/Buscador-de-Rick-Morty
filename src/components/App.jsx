@@ -10,12 +10,13 @@ import "../stylesheet/App.scss";
 const defaultData = GetLocalStorage("characterArray", []);
 const defaultSearchValue = GetLocalStorage("searchValue", "");
 const defaultSpecies = GetLocalStorage("species", "");
+const defaultStatus = GetLocalStorage("status", "");
 
 function App() {
   const [data, setData] = useState(defaultData);
   const [searchValue, setSearchValue] = useState(defaultSearchValue);
   const [species, setSpecies] = useState(defaultSpecies);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState(defaultStatus);
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -48,7 +49,10 @@ function App() {
                 SetLocalStorage("species", evt.currentTarget.value);
               }}
               status={status}
-              onChangeStatus={(evt) => setStatus(evt.currentTarget.value)}
+              onChangeStatus={(evt) => {
+                setStatus(evt.currentTarget.value);
+                SetLocalStorage("status", evt.currentTarget.value);
+              }}
               error={error}
             />
           }
