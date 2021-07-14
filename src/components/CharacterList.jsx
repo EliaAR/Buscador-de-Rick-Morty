@@ -4,7 +4,7 @@ import "../stylesheet/layout/characterList.scss";
 
 function CharacterList({ data, searchValue, species, error, status }) {
   return (
-    <div>
+    <div className="characterList__div">
       {error ? (
         <div className="characterList__paragraph">
           <p>

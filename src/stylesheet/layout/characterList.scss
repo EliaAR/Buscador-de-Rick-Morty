@@ -1,4 +1,8 @@
 .characterList {
+  &__div {
+    padding-top: 10px;
+  }
+
   &__paragraph {
     color: white;
     background-color: rgba(0, 0, 0, 0.75);

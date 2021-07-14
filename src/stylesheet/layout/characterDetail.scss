@@ -1,8 +1,8 @@
 .characterDetail {
   &__container {
-    background-image: url(../../images/rick.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../../images/faceRickk.png);
+    background-size: 40px;
+    background-repeat: repeat;
     min-height: 68vh;
     display: flex;
     flex-direction: column;
@@ -58,6 +58,9 @@
     }
     &__errorMsg {
       background-size: 650px;
+    }
+    &__pError {
+      font-size: 60px;
     }
   }
 }
