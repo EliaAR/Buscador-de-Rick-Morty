@@ -1,23 +1,22 @@
 import "../stylesheet/layout/filter.scss";
 
 const allSpecies = [
-  "Human",
   "Alien",
-  "Humanoid",
-  "unknown",
-  "Poopybutthole",
-  "Mythological Creature",
   "Animal",
-  "Robot",
   "Cronenberg",
   "Disease",
+  "Human",
+  "Humanoid",
+  "Mythological Creature",
   "Planet",
+  "Poopybutthole",
+  "Robot",
+  "Unknown",
 ];
 
 const allStatus = ["Alive", "Dead", "Unknown"];
 
 function Filters({
-  data,
   name,
   onChangeName,
   species,

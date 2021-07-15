@@ -1,5 +1,5 @@
 .header {
-  min-height: 22vh;
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #a5ff81;
@@ -11,7 +11,7 @@
 
   @media (min-width: 768px) {
     &__img {
-      height: 220px;
+      height: 190px;
     }
   }
 }

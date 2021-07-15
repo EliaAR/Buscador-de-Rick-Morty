@@ -2,7 +2,7 @@
   background-image: url(../../images/Rick&MortyPersonaje.png);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 68vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,9 +16,8 @@
   }
 
   @media (min-width: 768px) {
-    // &__errorRouteMsg {
     background-size: 650px;
-    // }
+
     &__paragraph {
       font-size: 60px;
     }

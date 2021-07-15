@@ -2,7 +2,10 @@ function DataAPI(params = {}) {
   const ENDPOINT = "https://rickandmortyapi.com/api/character";
   const searchParams = new URLSearchParams();
   for (let fieldName in params) {
-    searchParams.append(fieldName, params[fieldName]);
+    if (params[fieldName]) {
+      console.log(params[fieldName]);
+      searchParams.append(fieldName, params[fieldName]);
+    }
   }
   return fetch(ENDPOINT + "?" + searchParams.toString())
     .then((response) => response.json())

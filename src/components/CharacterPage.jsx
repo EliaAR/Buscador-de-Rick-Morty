@@ -3,9 +3,9 @@ import { Filters } from "./Filters";
 import { Sumary } from "./Sumary";
 import { CharacterList } from "./CharacterList";
 import { Footer } from "./Footer";
-import "../stylesheet/layout/homePage.scss";
+import "../stylesheet/layout/characterPage.scss";
 
-function HomePage({
+function CharacterPage({
   searchValue,
   onChangeName,
   data,
@@ -22,7 +22,7 @@ function HomePage({
   return (
     <>
       <Header />
-      <main className="mainPrincipal">
+      <main className="mainCharacter">
         <Filters
           name={searchValue}
           onChangeName={onChangeName}
@@ -51,4 +51,4 @@ function HomePage({
   );
 }
 
-export { HomePage };
+export { CharacterPage };

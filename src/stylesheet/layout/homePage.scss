@@ -1,7 +1,50 @@
 .mainPrincipal {
-  background-image: url(../../images/texturaRick&Morty.png);
-  background-repeat: repeat;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  min-height: 68vh;
+  min-height: 70vh;
+
+  &__paragraph {
+    text-align: center;
+    font-family: "Fontdiner Swanky", cursive;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(235, 235, 123);
+  }
+
+  &__span {
+    font-size: 20px;
+  }
+
+  &__browsers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Kalam", cursive;
+    color: black;
+    padding: 5px 10px 5px 10px;
+  }
+
+  &__browsersMeeseeks {
+    background-color: rgba(143, 143, 72, 0.75);
+  }
+
+  &__browsersCidatel {
+    background-color: rgba(112, 112, 57, 0.75);
+  }
+
+  &__browsersEpisode {
+    background-color: rgba(82, 82, 42, 0.75);
+  }
+
+  &__meeseeks {
+    height: 120px;
+  }
+
+  &__cidatel {
+    height: 120px;
+  }
+
+  &__episode {
+    height: 120px;
+  }
 }

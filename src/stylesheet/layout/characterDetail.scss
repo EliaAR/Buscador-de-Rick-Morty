@@ -3,16 +3,21 @@
     background-image: url(../../images/faceRickk.png);
     background-size: 40px;
     background-repeat: repeat;
-    min-height: 68vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   &__link {
-    background-color: rgbs(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
     width: 100%;
-    text-align: center;
+    height: 22px;
+    color: #c9ddc2;
+    font-family: "Asap", sans-serif;
   }
 
   &__card {
@@ -35,7 +40,7 @@
     background-image: url(../../images/Rick&MortyPersonaje.png);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 68vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,6 +57,7 @@
   @media (min-width: 768px) {
     &__link {
       font-size: 30px;
+      height: 50px;
     }
     &__card {
       padding-top: 150px;

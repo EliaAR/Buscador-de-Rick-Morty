@@ -2,7 +2,10 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { DataAPI } from "../Service/DataAPI";
 import { SetLocalStorage, GetLocalStorage } from "../Service/LocalStorage";
-import { HomePage } from "./HomePage";
+import { HomePage } from "./Homepage";
+import { CharacterPage } from "./CharacterPage";
+import { LocationPage } from "./LocationPage";
+import { EpisodePage } from "./EpisodePage";
 import { CharacterDetail } from "./CharacterDetail";
 import { ErrorRouteMsg } from "./ErrorRouteMsg";
 import "../stylesheet/App.scss";
@@ -38,26 +41,30 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/" exact children={<HomePage />}></Route>
         <Route
-          path="/"
+          path="/characterPage"
           exact
           children={
-            <HomePage
+            <CharacterPage
               data={data}
               searchValue={searchValue}
               onChangeName={(evt) => {
                 setSearchValue(evt.currentTarget.value);
                 SetLocalStorage("searchValue", evt.currentTarget.value);
+                setCurrentPage(1);
               }}
               species={species}
               onChangeSpecies={(evt) => {
                 setSpecies(evt.currentTarget.value);
                 SetLocalStorage("species", evt.currentTarget.value);
+                setCurrentPage(1);
               }}
               status={status}
               onChangeStatus={(evt) => {
                 setStatus(evt.currentTarget.value);
                 SetLocalStorage("status", evt.currentTarget.value);
+                setCurrentPage(1);
               }}
               error={error}
               currentPage={currentPage}
@@ -75,6 +82,8 @@ function App() {
             />
           }
         ></Route>
+        <Route path="/locationPage" exact children={<LocationPage />}></Route>
+        <Route path="/episodePage" exact children={<EpisodePage />}></Route>
         <Route
           path="/characterdetails/:id"
           children={<CharacterDetail data={data} />}

@@ -17,20 +17,6 @@ function CharacterList({ data, searchValue, species, error, status }) {
       ) : (
         <ul className="characterList__container">
           {data
-            .filter((card) => {
-              if (!species) {
-                return true;
-              } else {
-                return species === card.species;
-              }
-            })
-            .filter((card) => {
-              if (!status) {
-                return true;
-              } else {
-                return status === card.status;
-              }
-            })
             .sort(function (a, b) {
               if (a.name > b.name) {
                 return 1;

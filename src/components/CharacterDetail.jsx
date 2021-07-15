@@ -15,7 +15,7 @@ function CharacterDetail({ data }) {
     return (
       <>
         <Header />
-        <div className="characterDetail__container">
+        <main className="characterDetail__container">
           <Link to="/" className="characterDetail__link">
             <i className="fas fa-angle-double-left">
               Volver a la página principal
@@ -30,7 +30,7 @@ function CharacterDetail({ data }) {
               Planeta de origen: {specificCharacter.origin}
             </p>
           </div>
-        </div>
+        </main>
         <Footer />
       </>
     );
