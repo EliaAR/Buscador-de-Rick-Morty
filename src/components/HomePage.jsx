@@ -1,7 +1,8 @@
-import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { Footer } from "./Footer";
+import { Filters } from "./Filters";
+import { Sumary } from "./Sumary";
 import { CharacterList } from "./CharacterList";
+import { Footer } from "./Footer";
 import "../stylesheet/layout/homePage.scss";
 
 function HomePage({
@@ -13,6 +14,10 @@ function HomePage({
   error,
   status,
   onChangeStatus,
+  currentPage,
+  onClickBefore,
+  onClickAfter,
+  pages,
 }) {
   return (
     <>
@@ -26,6 +31,12 @@ function HomePage({
           onChangeSpecies={onChangeSpecies}
           status={status}
           onChangeStatus={onChangeStatus}
+        />
+        <Sumary
+          currentPage={currentPage}
+          onClickBefore={onClickBefore}
+          onClickAfter={onClickAfter}
+          pages={pages}
         />
         <CharacterList
           data={data}

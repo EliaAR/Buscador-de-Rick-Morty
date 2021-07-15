@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { CharacterCard } from "./CharacterCard";
 import { Header } from "./Header";
+import { CharacterCard } from "./CharacterCard";
 import { Footer } from "./Footer";
 import "../stylesheet/layout/characterDetail.scss";
 

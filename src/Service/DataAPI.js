@@ -6,8 +6,8 @@ function DataAPI(params = {}) {
   }
   return fetch(ENDPOINT + "?" + searchParams.toString())
     .then((response) => response.json())
-    .then((response) =>
-      response.results.map((character) => {
+    .then((response) => {
+      const characterArray = response.results.map((character) => {
         return {
           id: character.id,
           name: character.name,
@@ -17,8 +17,9 @@ function DataAPI(params = {}) {
           episode: character.episode.length,
           origin: character.origin.name,
         };
-      })
-    );
+      });
+      return { characterArray, totalPages: response.info.pages };
+    });
 }
 
 export { DataAPI };

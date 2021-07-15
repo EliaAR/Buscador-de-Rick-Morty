@@ -31,7 +31,7 @@ function Filters({
         Escribe aquí el nombre del personaje
       </label>
       <input
-        className="form__input"
+        className="form__input form__inputName"
         id="name"
         name="name"
         type="text"
@@ -43,15 +43,17 @@ function Filters({
         Escoge aquí la especie a filtrar
       </label>
       <select
-        className="form__select"
+        className="form__input form__select"
         name="species"
         id="species"
         value={species}
         onChange={onChangeSpecies}
       >
-        <option value="">Todas las especies</option>
+        <option className="form__options" value="">
+          Todas las especies
+        </option>
         {allSpecies.map((species) => (
-          <option key={species} value={species}>
+          <option className="form__options" key={species} value={species}>
             {species}
           </option>
         ))}
@@ -60,14 +62,16 @@ function Filters({
         Escoge aquí el estado a filtrar
       </label>
       <select
-        className="form__input"
+        className="form__input form__select"
         id="status"
         value={status}
         onChange={onChangeStatus}
       >
-        <option value="">Todos los estados</option>
+        <option className="form__options" value="">
+          Todos los estados
+        </option>
         {allStatus.map((status) => (
-          <option key={status} value={status}>
+          <option className="form__options" key={status} value={status}>
             {status}
           </option>
         ))}
