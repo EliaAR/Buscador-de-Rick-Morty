@@ -1,6 +1,8 @@
 .mainLocation {
-  background-image: url(../../images/texturaRick&Morty.png);
-  background-repeat: repeat;
+  background-image: url(../../images/rick&mortyComic.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 200px;
   padding-bottom: 10px;
   min-height: 70vh;
 
@@ -16,6 +18,8 @@
   }
 
   @media (min-width: 768px) {
+    background-size: 400px;
+
     &__link {
       font-size: 20px;
       height: 40px;

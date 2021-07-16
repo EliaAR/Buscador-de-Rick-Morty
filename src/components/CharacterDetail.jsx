@@ -1,33 +1,42 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Header } from "./Header";
 import { CharacterCard } from "./CharacterCard";
 import { Footer } from "./Footer";
+import { DataSingleCharacterAPI } from "../Service/DataAPI";
 import "../stylesheet/layout/characterDetail.scss";
 
-function CharacterDetail({ data }) {
+function CharacterDetail() {
+  const [singleCharacter, setSingleCharacter] = useState();
   let { id } = useParams();
-  let specificCharacter = data.find(
-    (character) => character.id.toString() === id
-  );
-  if (specificCharacter) {
+
+  useEffect(() => {
+    DataSingleCharacterAPI(id)
+      .then((character) => {
+        setSingleCharacter(character);
+      })
+      .catch((error) => console.log(error));
+  });
+
+  if (singleCharacter) {
     return (
       <>
         <Header />
         <main className="characterDetail__container">
-          <Link to="/" className="characterDetail__link">
+          <Link to="/characterPage" className="characterDetail__link">
             <i className="fas fa-angle-double-left">
-              Volver a la página principal
+              Volver al Buscador de personajes
             </i>
           </Link>
           <div className="characterDetail__card">
-            <CharacterCard card={specificCharacter} />
+            <CharacterCard card={singleCharacter} />
             <p className="characterDetail__paragraph">
-              Número de episodios: {specificCharacter.episode}
+              Número de episodios: {singleCharacter.episode}
             </p>
             <p className="characterDetail__paragraph">
-              Planeta de origen: {specificCharacter.origin}
+              Planeta de origen: {singleCharacter.origin}
             </p>
           </div>
         </main>

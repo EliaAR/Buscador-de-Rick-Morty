@@ -1,6 +1,6 @@
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { DataAPI } from "../Service/DataAPI";
+import { DataCharacterAPI } from "../Service/DataAPI";
 import { SetLocalStorage, GetLocalStorage } from "../Service/LocalStorage";
 import { HomePage } from "./Homepage";
 import { CharacterPage } from "./CharacterPage";
@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     setError(false);
-    DataAPI({ name: searchValue, species, status, page: currentPage })
+    DataCharacterAPI({ name: searchValue, species, status, page: currentPage })
       .then(({ characterArray, totalPages }) => {
         setData(characterArray);
         setPages(totalPages);
@@ -84,10 +84,7 @@ function App() {
         ></Route>
         <Route path="/locationPage" exact children={<LocationPage />}></Route>
         <Route path="/episodePage" exact children={<EpisodePage />}></Route>
-        <Route
-          path="/characterdetails/:id"
-          children={<CharacterDetail data={data} />}
-        />
+        <Route path="/characterdetails/:id" children={<CharacterDetail />} />
         <Route path="" children={<ErrorRouteMsg />} />
       </Switch>
     </Router>
