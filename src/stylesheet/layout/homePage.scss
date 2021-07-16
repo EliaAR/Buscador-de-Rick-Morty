@@ -1,50 +1,56 @@
 .mainPrincipal {
   min-height: 70vh;
-
-  &__paragraph {
-    text-align: center;
-    font-family: "Fontdiner Swanky", cursive;
-    font-size: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: rgb(235, 235, 123);
-  }
-
-  &__span {
-    font-size: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(../../images/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__browsers {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-family: "Kalam", cursive;
-    color: black;
-    padding: 5px 10px 5px 10px;
+    color: #6f796b;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.55);
   }
 
   &__browsersMeeseeks {
-    background-color: rgba(143, 143, 72, 0.75);
+    margin-bottom: 5px;
   }
 
   &__browsersCidatel {
-    background-color: rgba(112, 112, 57, 0.75);
-  }
-
-  &__browsersEpisode {
-    background-color: rgba(82, 82, 42, 0.75);
+    margin-bottom: 5px;
   }
 
   &__meeseeks {
-    height: 120px;
+    height: 115px;
   }
 
   &__cidatel {
-    height: 120px;
+    height: 115px;
   }
 
   &__episode {
-    height: 120px;
+    height: 115px;
+  }
+
+  @media (min-width: 768px) {
+    &__browsers {
+      width: 350px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__browsers {
+      width: 400px;
+    }
   }
 }

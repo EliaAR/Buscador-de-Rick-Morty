@@ -2,25 +2,21 @@ import { Link } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import "../stylesheet/layout/homePage.scss";
-import ciudadela from "../images/ciudadela.png";
-import Meeseeks from "../images/Meeseeks.png";
-import episode from "../images/episode.jpg";
+import citadel from "../images/citadel.png";
+import meeUnf from "../images/meeUnf.png";
+import seatUnf from "../images/seatUnf.png";
 
 function HomePage() {
   return (
     <>
       <Header />
       <main className="mainPrincipal">
-        <p className="mainPrincipal__paragraph">
-          El Mejorado Buscador de{" "}
-          <span className="mainPrincipal__span">Rick y Morty</span>
-        </p>
         <Link
           to="/characterPage"
           className="mainPrincipal__browsers mainPrincipal__browsersMeeseeks"
         >
           <img
-            src={Meeseeks}
+            src={meeUnf}
             alt="Meeseeks"
             tittle="Meeseeks"
             className="mainPrincipal__meeseeks"
@@ -32,7 +28,7 @@ function HomePage() {
           className="mainPrincipal__browsers mainPrincipal__browsersCidatel"
         >
           <img
-            src={ciudadela}
+            src={citadel}
             alt="Ciudadela"
             tittle="Ciudadela"
             className="mainPrincipal__cidatel"
@@ -44,7 +40,7 @@ function HomePage() {
           className="mainPrincipal__browsers mainPrincipal__browsersEpisode"
         >
           <img
-            src={episode}
+            src={seatUnf}
             alt="The old man and the seat"
             tittle="The old man and the seat"
             className="mainPrincipal__episode"

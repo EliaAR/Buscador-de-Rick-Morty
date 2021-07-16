@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Header } from "./Header";
 import { Filters } from "./Filters";
 import { Sumary } from "./Sumary";
@@ -23,6 +24,11 @@ function CharacterPage({
     <>
       <Header />
       <main className="mainCharacter">
+        <Link to="/" className="mainCharacter__link">
+          <i className="fas fa-angle-double-left">
+            Volver a la página principal
+          </i>
+        </Link>
         <Filters
           name={searchValue}
           onChangeName={onChangeName}

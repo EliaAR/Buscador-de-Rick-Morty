@@ -1,17 +1,31 @@
 .header {
   min-height: 20vh;
-  display: flex;
-  justify-content: center;
   border-bottom: 1px solid #a5ff81;
   background-color: black;
 
+  &__paragraph {
+    text-align: center;
+    font-family: "Fontdiner Swanky", cursive;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #a5ff81;
+  }
+
   &__img {
-    height: 100px;
+    height: 70px;
+    margin: auto;
+    display: block;
   }
 
   @media (min-width: 768px) {
+    &__paragraph {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 25px;
+    }
     &__img {
-      height: 190px;
+      height: 110px;
     }
   }
 }
