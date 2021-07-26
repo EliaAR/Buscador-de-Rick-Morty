@@ -31,7 +31,7 @@ function CharacterFilters({
         typeOfInput="input"
         id="name"
         textLabel="Escribe aquí el nombre del personaje"
-        placeholder=" Ej: Rick"
+        placeholder=" Ej: Mr. Meeseeks"
         value={name}
         onChangeInput={onChangeName}
       />

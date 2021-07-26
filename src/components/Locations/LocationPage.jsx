@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 import { Header } from "../Common/Header";
+import { LocationFilters } from "./LocationFilters";
 import { Footer } from "../Common/Footer";
 import "./locationPage.scss";
 
-function LocationPage() {
+function LocationPage({
+  nameLocation,
+  onChangeNameLocation,
+  type,
+  onChangeType,
+  dimension,
+  onChangeDimension,
+}) {
   return (
     <>
       <Header />
@@ -13,6 +21,14 @@ function LocationPage() {
             Volver a la página principal
           </i>
         </Link>
+        <LocationFilters
+          nameLocation={nameLocation}
+          onChangeNameLocation={onChangeNameLocation}
+          type={type}
+          onChangeType={onChangeType}
+          dimension={dimension}
+          onChangeDimension={onChangeDimension}
+        />
       </main>
       <Footer />
     </>
