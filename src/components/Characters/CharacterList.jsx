@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 import { CharacterCard } from "./CharacterCard";
 import "./characterList.scss";
 
-function CharacterList({ data, searchValue, species, error, status }) {
+function CharacterList({
+  data,
+  searchValueName,
+  selectSpecies,
+  error,
+  selectStatus,
+}) {
   return (
     <div className="characterList__div">
       {error ? (
         <div className="characterList__paragraph">
           <p>
-            {searchValue}, {species}, {status}{" "}
+            {searchValueName}, {selectSpecies}, {selectStatus}{" "}
           </p>
           <p className="characterList__text">
             No se encuentra en la Base de datos

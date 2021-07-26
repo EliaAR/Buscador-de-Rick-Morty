@@ -10,24 +10,31 @@ import { Footer } from "../Common/Footer";
 import "./characterPage.scss";
 
 const defaultData = GetLocalStorage("characterArray", []);
-const defaultSearchValue = GetLocalStorage("searchValue", "");
-const defaultSpecies = GetLocalStorage("species", "");
-const defaultStatus = GetLocalStorage("status", "");
+const defaultSearchValueName = GetLocalStorage("searchValueName", "");
+const defaultSelectSpecies = GetLocalStorage("selectSpecies", "");
+const defaultSelectStatus = GetLocalStorage("selectStatus", "");
 const defaultPages = GetLocalStorage("pages", 1);
 const defaultCurrentPage = GetLocalStorage("currentPage", 1);
 
 function CharacterPage() {
   const [data, setData] = useState(defaultData);
-  const [searchValue, setSearchValue] = useState(defaultSearchValue);
-  const [species, setSpecies] = useState(defaultSpecies);
-  const [status, setStatus] = useState(defaultStatus);
+  const [searchValueName, setSearchValueName] = useState(
+    defaultSearchValueName
+  );
+  const [selectSpecies, setSelectSpecies] = useState(defaultSelectSpecies);
+  const [selectStatus, setSelectStatus] = useState(defaultSelectStatus);
   const [pages, setPages] = useState(defaultPages);
   const [currentPage, setCurrentPage] = useState(defaultCurrentPage);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     setError(false);
-    DataCharacterAPI({ name: searchValue, species, status, page: currentPage })
+    DataCharacterAPI({
+      name: searchValueName,
+      species: selectSpecies,
+      status: selectStatus,
+      page: currentPage,
+    })
       .then(({ characterArray, totalPages }) => {
         setData(characterArray);
         setPages(totalPages);
@@ -35,7 +42,7 @@ function CharacterPage() {
         SetLocalStorage("pages", totalPages);
       })
       .catch((error) => setError(true));
-  }, [searchValue, species, status, currentPage]);
+  }, [searchValueName, selectSpecies, selectStatus, currentPage]);
 
   return (
     <>
@@ -47,22 +54,22 @@ function CharacterPage() {
           </i>
         </Link>
         <CharacterFilters
-          name={searchValue}
-          onChangeName={(evt) => {
-            setSearchValue(evt.currentTarget.value);
-            SetLocalStorage("searchValue", evt.currentTarget.value);
+          searchValueName={searchValueName}
+          onChangeSearchValueName={(evt) => {
+            setSearchValueName(evt.currentTarget.value);
+            SetLocalStorage("searchValueName", evt.currentTarget.value);
             setCurrentPage(1);
           }}
-          species={species}
-          onChangeSpecies={(evt) => {
-            setSpecies(evt.currentTarget.value);
-            SetLocalStorage("species", evt.currentTarget.value);
+          selectSpecies={selectSpecies}
+          onChangeSelectSpecies={(evt) => {
+            setSelectSpecies(evt.currentTarget.value);
+            SetLocalStorage("selectSpecies", evt.currentTarget.value);
             setCurrentPage(1);
           }}
-          status={status}
-          onChangeStatus={(evt) => {
-            setStatus(evt.currentTarget.value);
-            SetLocalStorage("status", evt.currentTarget.value);
+          selectStatus={selectStatus}
+          onChangeSelectStatus={(evt) => {
+            setSelectStatus(evt.currentTarget.value);
+            SetLocalStorage("selectStatus", evt.currentTarget.value);
             setCurrentPage(1);
           }}
         />
@@ -82,10 +89,10 @@ function CharacterPage() {
         />
         <CharacterList
           data={data}
-          searchValue={searchValue}
-          species={species}
+          searchValueName={searchValueName}
+          selectSpecies={selectSpecies}
           error={error}
-          status={status}
+          selectStatus={selectStatus}
         />
       </main>
       <Footer />

@@ -18,12 +18,12 @@ const allSpecies = [
 const allStatus = ["Alive", "Dead", "Unknown"];
 
 function CharacterFilters({
-  name,
-  onChangeName,
-  species,
-  onChangeSpecies,
-  status,
-  onChangeStatus,
+  searchValueName,
+  onChangeSearchValueName,
+  selectSpecies,
+  onChangeSelectSpecies,
+  selectStatus,
+  onChangeSelectStatus,
 }) {
   return (
     <form className="form" onSubmit={(evt) => evt.preventDefault()}>
@@ -32,15 +32,15 @@ function CharacterFilters({
         id="name"
         textLabel="Escribe aquí el nombre del personaje"
         placeholder=" Ej: Mr. Meeseeks"
-        value={name}
-        onChangeInput={onChangeName}
+        value={searchValueName}
+        onChangeInput={onChangeSearchValueName}
       />
       <Filter
         typeOfInput="select"
         id="species"
         textLabel="Escoge aquí la especie a filtrar"
-        value={species}
-        onChangeSelect={onChangeSpecies}
+        value={selectSpecies}
+        onChangeSelect={onChangeSelectSpecies}
         textOption="Todas las especies"
         options={allSpecies}
       />
@@ -48,8 +48,8 @@ function CharacterFilters({
         typeOfInput="select"
         id="status"
         textLabel="Escoge aquí el estado a filtrar"
-        value={status}
-        onChangeSelect={onChangeStatus}
+        value={selectStatus}
+        onChangeSelect={onChangeSelectStatus}
         textOption="Todos los estados"
         options={allStatus}
       />
