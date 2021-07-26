@@ -1,0 +1,11 @@
+.formLocation {
+  background-color: rgba(1, 50, 67, 0.55);
+
+  &__input {
+    color: #adacac;
+  }
+
+  &__inputName::placeholder {
+    color: #adacac;
+  }
+}

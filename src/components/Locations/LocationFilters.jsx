@@ -1,5 +1,6 @@
 import { Filter } from "../Common/Filter";
 import "../Common/filter.scss";
+import "./locationFilters.scss";
 
 const allTypes = [
   "Acid Plant",
@@ -86,7 +87,10 @@ function LocationFilters({
   onChangeDimension,
 }) {
   return (
-    <form className="form" onSubmit={(evt) => evt.preventDefault()}>
+    <form
+      className="form formLocation"
+      onSubmit={(evt) => evt.preventDefault()}
+    >
       <Filter
         typeOfInput="input"
         id="name"

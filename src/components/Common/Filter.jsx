@@ -16,7 +16,7 @@ function Filter({
           {textLabel}
         </label>
         <input
-          className="form__input form__inputName"
+          className="form__input form__inputName formLocation__inputName"
           id={id}
           name={id}
           type="text"
@@ -33,7 +33,7 @@ function Filter({
           {textLabel}
         </label>
         <select
-          className="form__input form__select"
+          className="form__input form__select formLocation__input"
           name={id}
           id={id}
           value={value}
