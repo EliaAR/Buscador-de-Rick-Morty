@@ -1,5 +1,5 @@
 import poopyShadow from "../../images/poopyShadow.png";
-import cronenbergSilu from "../../images/cronenbergSilu.png";
+import cronenbergShadow from "../../images/cronenbergShadow.png";
 import "./icons.scss";
 
 function SpeciesIcons({ species }) {
@@ -40,7 +40,7 @@ function SpeciesIcons({ species }) {
   } else if (species === "Cronenberg") {
     return (
       <img
-        src={cronenbergSilu}
+        src={cronenbergShadow}
         alt="Cronenberg"
         title="Cronenberg"
         className="icon__species icon__cronenberg"

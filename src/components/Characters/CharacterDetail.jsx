@@ -10,15 +10,17 @@ import "./characterDetail.scss";
 
 function CharacterDetail() {
   const [singleCharacter, setSingleCharacter] = useState();
+  const [error, setError] = useState(false);
   let { id } = useParams();
 
   useEffect(() => {
+    setError(false);
     DataSingleCharacterAPI(id)
       .then((character) => {
         setSingleCharacter(character);
       })
-      .catch((error) => console.log(error));
-  });
+      .catch((error) => setError(true));
+  }, [id]);
 
   if (singleCharacter) {
     return (
@@ -43,13 +45,21 @@ function CharacterDetail() {
         <Footer />
       </>
     );
-  } else {
+  } else if (error) {
     return (
       <>
         <Header />
         <main className="characterDetail__errorMsg">
           <p className="characterDetail__pError">Personaje no encontrado</p>
         </main>
+        <Footer />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Header />
+        <main className="characterDetail__loading"></main>
         <Footer />
       </>
     );
