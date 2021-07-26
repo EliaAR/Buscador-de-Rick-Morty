@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { SpeciesIcons, StatusIcons } from "./Icons";
-import "../stylesheet/layout/characterCard.scss";
+import { SpeciesIcons, StatusIcons } from "../Common/Icons";
+import "./characterCard.scss";
 
 function CharacterCard({ card }) {
   return (

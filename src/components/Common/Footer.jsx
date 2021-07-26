@@ -1,5 +1,5 @@
-import pickleRickUnfi from "../images/pickleRickUnfi.png";
-import "../stylesheet/layout/footer.scss";
+import pickleRickUnfi from "../../images/pickleRickUnfi.png";
+import "./footer.scss";
 
 function Footer() {
   return (

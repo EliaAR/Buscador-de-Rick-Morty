@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import "../stylesheet/layout/episodePage.scss";
+import { Header } from "../Common/Header";
+import { Footer } from "../Common/Footer";
+import "./episodePage.scss";
 
 function EpisodePage() {
   return (

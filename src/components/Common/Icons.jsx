@@ -1,6 +1,6 @@
-import poopyShadow from "../images/poopyShadow.png";
-import cronenbergSilu from "../images/cronenbergSilu.png";
-import "../stylesheet/layout/icon.scss";
+import poopyShadow from "../../images/poopyShadow.png";
+import cronenbergSilu from "../../images/cronenbergSilu.png";
+import "./icons.scss";
 
 function SpeciesIcons({ species }) {
   if (species === "Human") {

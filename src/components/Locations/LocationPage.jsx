@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import "../stylesheet/layout/locationPage.scss";
+import { Header } from "../Common/Header";
+import { Footer } from "../Common/Footer";
+import "./locationPage.scss";
 
 function LocationPage() {
   return (

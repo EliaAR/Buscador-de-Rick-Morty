@@ -1,5 +1,5 @@
-import "../stylesheet/layout/filter.scss";
-import { Filter } from "./Filter";
+import { Filter } from "../Common/Filter";
+import "../Common/filter.scss";
 
 const allSpecies = [
   "Alien",

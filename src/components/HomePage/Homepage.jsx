@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import citadel from "../images/citadel.png";
-import meeUnf from "../images/meeUnf.png";
-import seatUnf from "../images/seatUnf.png";
-import "../stylesheet/layout/homePage.scss";
+import { Header } from "../Common/Header";
+import { Footer } from "../Common/Footer";
+import citadel from "../../images/citadel.png";
+import meeUnf from "../../images/meeUnf.png";
+import seatUnf from "../../images/seatUnf.png";
+import "./homePage.scss";
 
 function HomePage() {
   return (

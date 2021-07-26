@@ -2,11 +2,11 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Header } from "./Header";
+import { Header } from "../Common/Header";
 import { CharacterCard } from "./CharacterCard";
-import { Footer } from "./Footer";
-import { DataSingleCharacterAPI } from "../Service/DataAPI";
-import "../stylesheet/layout/characterDetail.scss";
+import { Footer } from "../Common/Footer";
+import { DataSingleCharacterAPI } from "../../Service/DataAPI";
+import "./characterDetail.scss";
 
 function CharacterDetail() {
   const [singleCharacter, setSingleCharacter] = useState();

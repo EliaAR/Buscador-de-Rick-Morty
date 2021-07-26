@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { Header } from "./Header";
+import { Header } from "../Common/Header";
 import { CharacterFilters } from "./CharacterFilters";
-import { Sumary } from "./Sumary";
+import { Sumary } from "../Common/Sumary";
 import { CharacterList } from "./CharacterList";
-import { Footer } from "./Footer";
-import "../stylesheet/layout/characterPage.scss";
+import { Footer } from "../Common/Footer";
+import "./characterPage.scss";
 
 function CharacterPage({
   searchValue,

@@ -1,6 +1,6 @@
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import "../stylesheet/layout/errorRouteMsg.scss";
+import { Header } from "../Common/Header";
+import { Footer } from "../Common/Footer";
+import "./errorRouteMsg.scss";
 
 function ErrorRouteMsg() {
   return (

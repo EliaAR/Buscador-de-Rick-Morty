@@ -1,4 +1,4 @@
-import "../stylesheet/layout/sumary.scss";
+import "./sumary.scss";
 
 function Sumary({ currentPage, pages, onClickBefore, onClickAfter }) {
   return (

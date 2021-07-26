@@ -1,14 +1,14 @@
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { DataCharacterAPI } from "../Service/DataAPI";
-import { SetLocalStorage, GetLocalStorage } from "../Service/LocalStorage";
-import { HomePage } from "./Homepage";
-import { CharacterPage } from "./CharacterPage";
-import { LocationPage } from "./LocationPage";
-import { EpisodePage } from "./EpisodePage";
-import { CharacterDetail } from "./CharacterDetail";
-import { ErrorRouteMsg } from "./ErrorRouteMsg";
-import "../stylesheet/App.scss";
+import { DataCharacterAPI } from "../../Service/DataAPI";
+import { SetLocalStorage, GetLocalStorage } from "../../Service/LocalStorage";
+import { HomePage } from "../HomePage/Homepage";
+import { CharacterPage } from "../Characters/CharacterPage";
+import { LocationPage } from "../Locations/LocationPage";
+import { EpisodePage } from "../Episodes/EpisodePage";
+import { CharacterDetail } from "../Characters/CharacterDetail";
+import { ErrorRouteMsg } from "../ErrorRouteMsg/ErrorRouteMsg";
+import "./App.scss";
 
 const defaultData = GetLocalStorage("characterArray", []);
 const defaultSearchValue = GetLocalStorage("searchValue", "");
