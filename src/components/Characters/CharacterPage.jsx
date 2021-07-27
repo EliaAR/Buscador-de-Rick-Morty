@@ -9,13 +9,6 @@ import { CharacterList } from "./CharacterList";
 import { Footer } from "../Common/Footer";
 import "./characterPage.scss";
 
-// const defaultData = GetLocalStorage("characterArray", []);
-// const defaultSearchValueName = GetLocalStorage("searchValueName", "");
-// const defaultSelectSpecies = GetLocalStorage("selectSpecies", "");
-// const defaultSelectStatus = GetLocalStorage("selectStatus", "");
-// const defaultPages = GetLocalStorage("pages", 1);
-// const defaultCurrentPage = GetLocalStorage("currentPage", 1);
-
 function CharacterPage() {
   const [data, setData] = useState(GetLocalStorage("characterArray", []));
   const [searchValueName, setSearchValueName] = useState(

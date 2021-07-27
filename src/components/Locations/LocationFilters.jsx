@@ -79,12 +79,12 @@ const allDimensions = [
 ];
 
 function LocationFilters({
-  nameLocation,
-  onChangeNameLocation,
-  type,
-  onChangeType,
-  dimension,
-  onChangeDimension,
+  searchValueLocation,
+  onChangesearchValueLocation,
+  selectType,
+  onChangeSelectType,
+  selectDimension,
+  onChangeSelectDimension,
 }) {
   return (
     <form
@@ -96,15 +96,15 @@ function LocationFilters({
         id="name"
         textLabel="Escribe aquí el nombre de la localización"
         placeholder=" Ej: Citadel of Ricks"
-        value={nameLocation}
-        onChangeInput={onChangeNameLocation}
+        value={searchValueLocation}
+        onChangeInput={onChangesearchValueLocation}
       />
       <Filter
         typeOfInput="select"
         id="type"
         textLabel="Escoge aquí el tipo a filtrar"
-        value={type}
-        onChangeSelect={onChangeType}
+        value={selectType}
+        onChangeSelect={onChangeSelectType}
         textOption="Todos los tipos"
         options={allTypes}
       />
@@ -112,8 +112,8 @@ function LocationFilters({
         typeOfInput="select"
         id="dimension"
         textLabel="Escoge aquí la dimensión a filtrar"
-        value={dimension}
-        onChangeSelect={onChangeDimension}
+        value={selectDimension}
+        onChangeSelect={onChangeSelectDimension}
         textOption="Todos los estados"
         options={allDimensions}
       />

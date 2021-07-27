@@ -24,4 +24,19 @@
       height: 40px;
     }
   }
+
+  .sumary {
+    background-color: rgba(2, 13, 17, 0.55);
+    margin-top: 0;
+  }
+
+  .sumary__buttons {
+    background: linear-gradient(to bottom, #0f396a 0%, #0a2c53 100%);
+  }
+
+  .sumary__buttons:after {
+    border-top: 14px solid #072241;
+    border-bottom: 14px solid #072241;
+    border-right: 14px solid #072241;
+  }
 }
