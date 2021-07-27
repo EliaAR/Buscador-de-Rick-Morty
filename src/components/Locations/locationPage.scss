@@ -2,7 +2,7 @@
   background-image: url(../../images/rick&mortyComic.png);
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: 200px;
+  background-size: 300px;
   padding-bottom: 10px;
   min-height: 70vh;
 
@@ -26,17 +26,21 @@
   }
 
   .sumary {
-    background-color: rgba(2, 13, 17, 0.55);
+    background-color: rgba(12, 37, 44, 0.55);
     margin-top: 0;
   }
 
   .sumary__buttons {
-    background: linear-gradient(to bottom, #0f396a 0%, #0a2c53 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(1, 50, 67, 0.55) 0%,
+      rgb(1, 44, 58) 100%
+    );
   }
 
   .sumary__buttons:after {
-    border-top: 14px solid #072241;
-    border-bottom: 14px solid #072241;
-    border-right: 14px solid #072241;
+    border-top: 11px solid #072241;
+    border-bottom: 11px solid #072241;
+    border-right: 11px solid #072241;
   }
 }

@@ -26,7 +26,7 @@ function CharacterDetail() {
     return (
       <>
         <Header />
-        <main className="characterDetail__container">
+        <main className="characterDetail">
           <Link to="/characterPage" className="characterDetail__link">
             <i className="fas fa-angle-double-left">
               Volver al Buscador de personajes

@@ -19,7 +19,7 @@ function HomePage() {
             src={meeUnf}
             alt="Meeseeks"
             tittle="Meeseeks"
-            className="mainPrincipal__meeseeks"
+            className="mainPrincipal__img"
           />
           <p>Buscador por personajes</p>
         </Link>
@@ -31,7 +31,7 @@ function HomePage() {
             src={citadel}
             alt="Ciudadela"
             tittle="Ciudadela"
-            className="mainPrincipal__cidatel"
+            className="mainPrincipal__img"
           />
           <p>Buscador por localizaciones</p>
         </Link>
@@ -43,7 +43,7 @@ function HomePage() {
             src={seatUnf}
             alt="The old man and the seat"
             tittle="The old man and the seat"
-            className="mainPrincipal__episode"
+            className="mainPrincipal__img"
           />
           <p>Buscador por episodios</p>
         </Link>

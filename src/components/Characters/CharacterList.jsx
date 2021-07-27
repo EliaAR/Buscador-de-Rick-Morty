@@ -10,7 +10,7 @@ function CharacterList({
   selectStatus,
 }) {
   return (
-    <div className="characterList__div">
+    <div className="characterList">
       {error ? (
         <div className="characterList__paragraph">
           <p>

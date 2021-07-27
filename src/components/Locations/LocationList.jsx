@@ -1,3 +1,6 @@
+import { LocationCard } from "./LocationCard";
+import "./locationList.scss";
+
 function LocationList({
   dataLocation,
   error,
@@ -6,14 +9,14 @@ function LocationList({
   selectDimension,
 }) {
   return (
-    <div className="locationList__div">
+    <div className="locationList">
       {error ? (
         <div className="locationList__paragraph">
           <p>
             {searchValueLocation}, {selectType}, {selectDimension}{" "}
           </p>
           <p className="locationList__text">
-            No se encuentra en la Base de datos
+            No se encuentra en la Base de datos o No existe
           </p>
         </div>
       ) : (
@@ -29,7 +32,9 @@ function LocationList({
               return 0;
             })
             .map((card) => (
-              <li className="locationList__item">{card.name}</li>
+              <li key={card.id} className="locationList__item">
+                <LocationCard card={card} />
+              </li>
             ))}
         </ul>
       )}

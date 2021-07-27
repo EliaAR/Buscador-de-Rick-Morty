@@ -22,35 +22,28 @@
     background-color: rgba(0, 0, 0, 0.55);
   }
 
-  &__browsersMeeseeks {
-    margin-bottom: 5px;
+  &__browsersMeeseeks,
+  &__browsersEpisode {
+    width: 300px;
   }
 
-  &__browsersCidatel {
-    margin-bottom: 5px;
-  }
-
-  &__meeseeks {
-    height: 115px;
-  }
-
-  &__cidatel {
-    height: 115px;
-  }
-
-  &__episode {
-    height: 115px;
+  &__img {
+    height: 90px;
   }
 
   @media (min-width: 768px) {
     &__browsers {
-      width: 350px;
+      width: 450px;
+      height: 120px;
+    }
+    &__img {
+      height: 120px;
     }
   }
 
   @media (min-width: 1024px) {
     &__browsers {
-      width: 400px;
+      width: 600px;
     }
   }
 }
