@@ -7,7 +7,7 @@ function LocationCard({ card }) {
       <div className="locationCard__container">
         <p>Tipo: {card.type}</p>
         <p>Dimensión: {card.dimension}</p>
-        <p>Núm. residentes: {card.residents.length}</p>
+        <p>Núm. residentes: {card.residents}</p>
       </div>
     </div>
   );

@@ -12,11 +12,11 @@ function LocationList({
     <div className="locationList">
       {error ? (
         <div className="locationList__paragraph">
-          <p>
+          <p className="locationList__searchs">
             {searchValueLocation}, {selectType}, {selectDimension}{" "}
           </p>
           <p className="locationList__text">
-            No se encuentra en la Base de datos o No existe
+            No está en la Base de datos o No existe
           </p>
         </div>
       ) : (

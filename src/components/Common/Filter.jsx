@@ -11,12 +11,12 @@ function Filter({
 }) {
   if (typeOfInput === "input") {
     return (
-      <>
-        <label htmlFor={id} className="form__label">
+      <div className="form__nameContainer">
+        <label htmlFor={id} className="form__label form__labelName">
           {textLabel}
         </label>
         <input
-          className="form__input form__inputName formLocation__inputName"
+          className="form__input form__inputName"
           id={id}
           name={id}
           type="text"
@@ -24,16 +24,16 @@ function Filter({
           value={value}
           onChange={onChangeInput}
         />
-      </>
+      </div>
     );
   } else {
     return (
-      <>
-        <label htmlFor={id} className="form__label">
+      <div className="form__selectContainer">
+        <label htmlFor={id} className="form__label form__labelSelect">
           {textLabel}
         </label>
         <select
-          className="form__input form__select formLocation__input"
+          className="form__input form__select"
           name={id}
           id={id}
           value={value}
@@ -48,7 +48,7 @@ function Filter({
             </option>
           ))}
         </select>
-      </>
+      </div>
     );
   }
 }
