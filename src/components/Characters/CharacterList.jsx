@@ -13,11 +13,11 @@ function CharacterList({
     <div className="characterList">
       {error ? (
         <div className="characterList__paragraph">
-          <p>
+          <p className="characterList__searchs">
             {searchValueName}, {selectSpecies}, {selectStatus}{" "}
           </p>
           <p className="characterList__text">
-            No se encuentra en la Base de datos
+            No se encuentra en la Base de datos o No existe
           </p>
         </div>
       ) : (

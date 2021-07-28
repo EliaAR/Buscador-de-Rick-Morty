@@ -1,23 +1,29 @@
 .characterList {
   padding-top: 10px;
+  padding-bottom: 10px;
 
   &__paragraph {
-    margin-top: 50px;
     margin-left: 10px;
     margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: rgba(0, 0, 0, 0.75);
     text-align: center;
     color: white;
     font-size: 20px;
     font-weight: bold;
-    text-transform: capitalize;
+  }
+
+  &__searchs {
+    text-transform: uppercase;
   }
 
   &__text {
     margin-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     font-size: 17px;
     font-weight: normal;
-    text-transform: none;
   }
 
   &__container {
@@ -37,11 +43,13 @@
 
   @media (min-width: 768px) {
     &__paragraph {
-      margin-top: 130px;
-      font-size: 50px;
+      margin-top: 55px;
+    }
+    &__searchs {
+      font-size: 25px;
     }
     &__text {
-      font-size: 40px;
+      font-size: 22px;
     }
     &__container {
       grid-template-columns: 1fr 1fr;

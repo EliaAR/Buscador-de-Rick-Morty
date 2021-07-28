@@ -56,6 +56,7 @@ function LocationPage() {
             Volver a la página principal
           </i>
         </Link>
+        <p className="mainLocation__paragraph">Búsqueda de localizaciones</p>
         <LocationFilters
           searchValueLocation={searchValueLocation}
           onChangesearchValueLocation={(evt) => {

@@ -10,26 +10,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
     height: 22px;
     background-color: rgba(0, 0, 0, 0.75);
     color: #7b7f7a;
     font-family: "Asap", sans-serif;
   }
 
+  &__paragraph {
+    background-color: rgba(1, 50, 67, 0.75);
+    text-align: center;
+    font-family: "IM Fell English SC", serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #9c9c8d;
+  }
+
   @media (min-width: 768px) {
+    background-position: top 460px left 50%;
     background-size: 400px;
 
     &__link {
       height: 40px;
       font-size: 20px;
     }
+    &__paragraph {
+      font-size: 35px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    background-position: top 270px left 50%;
   }
 
   .sumary {
     margin-bottom: 20px;
     background-color: rgba(1, 50, 67, 0.25);
   }
-
   .sumary__buttons {
     background: linear-gradient(
       to bottom,
@@ -37,7 +54,6 @@
       rgb(1, 44, 58) 100%
     );
   }
-
   .sumary__buttons:after {
     border-top: 11px solid #072241;
     border-bottom: 11px solid #072241;
