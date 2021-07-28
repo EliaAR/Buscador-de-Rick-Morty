@@ -52,6 +52,7 @@ function CharacterPage() {
             Volver a la página principal
           </i>
         </Link>
+        <p className="mainCharacter__paragraph">Búsqueda de personajes</p>
         <CharacterFilters
           searchValueName={searchValueName}
           onChangeSearchValueName={(evt) => {
@@ -69,6 +70,15 @@ function CharacterPage() {
           onChangeSelectStatus={(evt) => {
             setSelectStatus(evt.currentTarget.value);
             SetLocalStorage("selectStatus", evt.currentTarget.value);
+            setCurrentPage(1);
+          }}
+          onClickReset={() => {
+            setSearchValueName("");
+            SetLocalStorage("searchValueName", "");
+            setSelectSpecies("");
+            SetLocalStorage("selectSpecies", "");
+            setSelectStatus("");
+            SetLocalStorage("selectStatus", "");
             setCurrentPage(1);
           }}
         />

@@ -3,16 +3,16 @@
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  border-top: 1px solid #a5ff81;
   background-color: black;
+  border-top: 1px solid #a5ff81;
 
   &__img {
     height: 30px;
   }
 
   &__small {
-    color: white;
     height: 20px;
+    color: white;
     font-family: "Fresca", sans-serif;
   }
 

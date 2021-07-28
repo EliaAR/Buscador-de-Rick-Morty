@@ -9,8 +9,8 @@
     width: 15px;
   }
   &__cronenberg {
-    height: 20px;
     margin-left: -150px;
+    height: 20px;
   }
   &__status {
     position: absolute;
@@ -20,12 +20,12 @@
 
   @media (min-width: 768px) {
     &__species {
-      font-size: 20px;
       margin-right: 90px;
+      font-size: 20px;
     }
     &__status {
-      font-size: 20px;
       margin-right: -250px;
+      font-size: 20px;
     }
   }
 }

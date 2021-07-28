@@ -1,4 +1,5 @@
 import { Filter } from "../Common/Filter";
+import { Reset } from "../Common/Reset";
 import "../Common/filter.scss";
 
 const allSpecies = [
@@ -24,6 +25,7 @@ function CharacterFilters({
   onChangeSelectSpecies,
   selectStatus,
   onChangeSelectStatus,
+  onClickReset,
 }) {
   return (
     <form className="form" onSubmit={(evt) => evt.preventDefault()}>
@@ -53,6 +55,7 @@ function CharacterFilters({
         textOption="Todos los estados"
         options={allStatus}
       />
+      <Reset onClickReset={onClickReset} />
     </form>
   );
 }

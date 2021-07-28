@@ -60,7 +60,7 @@ function LocationPage() {
           searchValueLocation={searchValueLocation}
           onChangesearchValueLocation={(evt) => {
             setSearchValueLocation(evt.currentTarget.value);
-            SetLocalStorage("searchValueLocation", evt.currentTarget.value);
+            SetLocalStorage("setSearchValueLocation", evt.currentTarget.value);
             setCurrentPageLocation(1);
           }}
           selectType={selectType}
@@ -73,6 +73,15 @@ function LocationPage() {
           onChangeSelectDimension={(evt) => {
             setSelectDimension(evt.currentTarget.value);
             SetLocalStorage("selectDimension", evt.currentTarget.value);
+            setCurrentPageLocation(1);
+          }}
+          onClickReset={() => {
+            setSearchValueLocation("");
+            SetLocalStorage("setSearchValueLocation", "");
+            setSelectType("");
+            SetLocalStorage("selectType", "");
+            setSelectDimension("");
+            SetLocalStorage("selectDimension", "");
             setCurrentPageLocation(1);
           }}
         />

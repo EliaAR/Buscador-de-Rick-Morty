@@ -1,17 +1,17 @@
 .mainLocation {
+  padding-bottom: 10px;
+  min-height: 70vh;
   background-image: url(../../images/rick&mortyComic.png);
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 300px;
-  padding-bottom: 10px;
-  min-height: 70vh;
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.75);
     height: 22px;
+    background-color: rgba(0, 0, 0, 0.75);
     color: #7b7f7a;
     font-family: "Asap", sans-serif;
   }
@@ -20,15 +20,14 @@
     background-size: 400px;
 
     &__link {
-      font-size: 20px;
       height: 40px;
+      font-size: 20px;
     }
   }
 
   .sumary {
-    background-color: rgba(1, 50, 67, 0.25);
-    margin-top: 0;
     margin-bottom: 20px;
+    background-color: rgba(1, 50, 67, 0.25);
   }
 
   .sumary__buttons {
