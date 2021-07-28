@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PrintErrorMsg } from "../../utils/printErrorMsg";
 import { CharacterCard } from "./CharacterCard";
 import "./characterList.scss";
 
@@ -14,7 +15,7 @@ function CharacterList({
       {error ? (
         <div className="characterList__paragraph">
           <p className="characterList__searchs">
-            {searchValueName}, {selectSpecies}, {selectStatus}{" "}
+            {PrintErrorMsg(searchValueName, selectSpecies, selectStatus)}
           </p>
           <p className="characterList__text">
             No se encuentra en la Base de datos o No existe

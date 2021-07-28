@@ -1,4 +1,5 @@
 import { LocationCard } from "./LocationCard";
+import { PrintErrorMsg } from "../../utils/printErrorMsg";
 import "./locationList.scss";
 
 function LocationList({
@@ -13,7 +14,7 @@ function LocationList({
       {error ? (
         <div className="locationList__paragraph">
           <p className="locationList__searchs">
-            {searchValueLocation}, {selectType}, {selectDimension}{" "}
+            {PrintErrorMsg(searchValueLocation, selectType, selectDimension)}{" "}
           </p>
           <p className="locationList__text">
             No está en la Base de datos o No existe
