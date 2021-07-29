@@ -1,15 +1,15 @@
-.locationCard {
+.episodeCard {
   text-align: center;
   font-family: "Bubblegum Sans", cursive;
 
   &__name {
     padding-bottom: 2px;
     padding-top: 2px;
-    background-color: #5b4b92e0;
+    background-color: rgb(53, 141, 158);
     border: 1px solid black;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    color: rgba(5, 5, 5, 0.95);
+    color: rgba(23, 22, 22, 0.95);
     font-size: 20px;
     text-transform: uppercase;
   }

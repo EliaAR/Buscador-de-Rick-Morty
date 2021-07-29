@@ -1,0 +1,72 @@
+.episodeList {
+  &__paragraph {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    color: #e0dfdf;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__img {
+    width: 200px;
+  }
+
+  &__searchs {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: normal;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    justify-items: center;
+  }
+
+  &__item {
+    width: 280px;
+  }
+
+  @media (min-width: 768px) {
+    &__paragraph {
+      margin-top: 90px;
+    }
+    &__img {
+      width: 300px;
+    }
+    &__searchs {
+      font-size: 25px;
+    }
+    &__text {
+      font-size: 22px;
+    }
+    &__container {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 10px;
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
+    &__item {
+      width: 350px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__container {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-row-gap: 20px;
+    }
+  }
+}

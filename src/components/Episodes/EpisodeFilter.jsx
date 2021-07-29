@@ -46,27 +46,27 @@ const allEpisodes = [
   "S04E10",
 ];
 
-function EpisodeFilter(
+function EpisodeFilter({
   searchValueEpisode,
   onChangeSearchValueEpisode,
   selectEpisode,
   onChangeSelectEpisode,
-  onClickReset
-) {
+  onClickReset,
+}) {
   return (
     <form className="form" onSubmit={(evt) => evt.preventDefault()}>
       <Filter
         typeOfInput="input"
         id="name"
-        textLabel="Escribe aquí el nombre de la localización"
-        placeholder=" Ej: Citadel of Ricks"
+        textLabel="Escribe aquí el nombre del episodio"
+        placeholder=" Ej: The old man at the seat"
         value={searchValueEpisode}
         onChangeInput={onChangeSearchValueEpisode}
       />
       <Filter
         typeOfInput="select"
         id="type"
-        textLabel="Escoge aquí el tipo a filtrar"
+        textLabel="Escoge aquí un episodio"
         value={selectEpisode}
         onChangeSelect={onChangeSelectEpisode}
         textOption="Todos los tipos"
