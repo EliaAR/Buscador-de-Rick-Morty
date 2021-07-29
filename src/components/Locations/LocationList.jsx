@@ -14,7 +14,7 @@ function LocationList({
       {error ? (
         <div className="locationList__paragraph">
           <p className="locationList__searchs">
-            {PrintErrorMsg(searchValueLocation, selectType, selectDimension)}{" "}
+            {PrintErrorMsg(searchValueLocation, selectType, selectDimension)}
           </p>
           <p className="locationList__text">
             No está en la Base de datos o No existe

@@ -18,7 +18,7 @@ function CharacterList({
             {PrintErrorMsg(searchValueName, selectSpecies, selectStatus)}
           </p>
           <p className="characterList__text">
-            No se encuentra en la Base de datos o No existe
+            No está en la Base de datos o No existe
           </p>
         </div>
       ) : (

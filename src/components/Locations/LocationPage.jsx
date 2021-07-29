@@ -103,7 +103,7 @@ function LocationPage() {
         <LocationList
           dataLocation={dataLocation}
           error={error}
-          searchValueLocation={setSearchValueLocation}
+          searchValueLocation={searchValueLocation}
           selectType={selectType}
           selectDimension={selectDimension}
         />
