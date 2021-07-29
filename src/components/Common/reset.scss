@@ -4,9 +4,8 @@
   padding-top: 8px;
 
   &__button {
-    display: inline-block;
     position: relative;
-    padding: 0 0.95em 0 0;
+    width: 90px;
     background-color: rgb(224, 220, 220);
     background-image: linear-gradient(
       rgba(255, 255, 255, 0.1),
@@ -29,14 +28,8 @@
 
   &__button:before {
     content: "";
-    margin: 0 0.5em 0 0;
-    padding: 0 0.5em;
     border-right: 0.075em solid rgba(0, 0, 0, 0.1);
     box-shadow: 0.075em 0 0 rgba(255, 255, 255, 0.25);
-    float: left;
-    text-align: center;
-    font-style: normal;
-    font-weight: normal;
     text-decoration: none;
   }
 
@@ -59,6 +52,16 @@
     );
   }
 
+  &__icon {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+  }
+
+  &__paragraph {
+    padding-left: 15px;
+  }
+
   @media (min-width: 768px) {
     &__button {
       font-size: 17px;
@@ -68,6 +71,7 @@
   @media (min-width: 1024px) {
     align-items: center;
     &__button {
+      width: 110px;
       height: 30px;
     }
   }

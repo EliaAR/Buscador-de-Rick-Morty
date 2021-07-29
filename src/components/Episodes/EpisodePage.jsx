@@ -13,6 +13,7 @@ function EpisodePage() {
             Volver a la página principal
           </i>
         </Link>
+        <p className="mainEpisode__paragraph">Búsqueda de episodios</p>
       </main>
       <Footer />
     </>

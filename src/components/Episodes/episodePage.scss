@@ -1,9 +1,9 @@
 .mainEpisode {
   padding-bottom: 10px;
   min-height: 70vh;
-  background-image: url(../../images/texturaRick&Morty.png);
+  background-image: url(../../images/facesGreen.png);
   background-repeat: repeat;
-  background-size: contain;
+  background-size: 200px;
 
   &__link {
     display: flex;
@@ -16,12 +16,22 @@
     font-family: "Asap", sans-serif;
   }
 
-  @media (min-width: 768px) {
-    background-size: auto;
+  &__paragraph {
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    font-family: "IM Fell English SC", serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #adad91;
+  }
 
+  @media (min-width: 768px) {
     &__link {
       height: 40px;
       font-size: 20px;
+    }
+    &__paragraph {
+      font-size: 35px;
     }
   }
 }
