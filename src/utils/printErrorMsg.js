@@ -1,5 +1,5 @@
-function PrintErrorMsg() {
-  return arguments.filter(Boolean).join(", ");
+function PrintErrorMsg(...rest) {
+  return rest.filter(Boolean).join(", ");
 }
 
 export { PrintErrorMsg };
