@@ -82,20 +82,23 @@ function CharacterPage() {
             setCurrentPage(1);
           }}
         />
-        <Sumary
-          currentPage={currentPage}
-          pages={pages}
-          onClickBefore={() => {
-            if (currentPage >= 2) {
-              setCurrentPage(currentPage - 1);
-            }
-          }}
-          onClickAfter={() => {
-            if (currentPage < pages) {
-              setCurrentPage(currentPage + 1);
-            }
-          }}
-        />
+        {!error ? (
+          <Sumary
+            currentPage={currentPage}
+            pages={pages}
+            onClickBefore={() => {
+              if (currentPage >= 2) {
+                setCurrentPage(currentPage - 1);
+              }
+            }}
+            onClickAfter={() => {
+              if (currentPage < pages) {
+                setCurrentPage(currentPage + 1);
+              }
+            }}
+          />
+        ) : null}
+
         <CharacterList
           data={data}
           searchValueName={searchValueName}

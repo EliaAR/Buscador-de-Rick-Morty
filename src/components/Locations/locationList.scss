@@ -1,8 +1,6 @@
 .locationList {
   &__paragraph {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 150px;
+    margin: 10px 10px 150px 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgba(12, 37, 44, 0.75);
@@ -39,6 +37,7 @@
   @media (min-width: 768px) {
     margin-top: 200px;
     &__paragraph {
+      margin-top: 280px;
       margin-bottom: 0;
     }
     &__searchs {
@@ -59,9 +58,6 @@
   }
 
   @media (min-width: 1024px) {
-    &__paragraph {
-      margin-top: 0;
-    }
     &__container {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-row-gap: 20px;

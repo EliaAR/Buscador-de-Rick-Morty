@@ -86,20 +86,22 @@ function LocationPage() {
             setCurrentPageLocation(1);
           }}
         />
-        <Sumary
-          currentPage={currentPageLocation}
-          pages={pagesLocation}
-          onClickBefore={() => {
-            if (currentPageLocation >= 2) {
-              setCurrentPageLocation(currentPageLocation - 1);
-            }
-          }}
-          onClickAfter={() => {
-            if (currentPageLocation < pagesLocation) {
-              setCurrentPageLocation(currentPageLocation + 1);
-            }
-          }}
-        />
+        {!error ? (
+          <Sumary
+            currentPage={currentPageLocation}
+            pages={pagesLocation}
+            onClickBefore={() => {
+              if (currentPageLocation >= 2) {
+                setCurrentPageLocation(currentPageLocation - 1);
+              }
+            }}
+            onClickAfter={() => {
+              if (currentPageLocation < pagesLocation) {
+                setCurrentPageLocation(currentPageLocation + 1);
+              }
+            }}
+          />
+        ) : null}
         <LocationList
           dataLocation={dataLocation}
           error={error}

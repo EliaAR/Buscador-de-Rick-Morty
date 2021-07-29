@@ -14,7 +14,12 @@
     font-weight: bold;
   }
 
+  &__img {
+    width: 90px;
+  }
+
   &__searchs {
+    margin-top: 10px;
     text-transform: uppercase;
   }
 
@@ -43,7 +48,7 @@
 
   @media (min-width: 768px) {
     &__paragraph {
-      margin-top: 55px;
+      margin-top: 65px;
     }
     &__searchs {
       font-size: 25px;
@@ -62,6 +67,9 @@
     }
 
     @media (min-width: 1024px) {
+      &__paragraph {
+        margin-top: 90px;
+      }
       &__container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
