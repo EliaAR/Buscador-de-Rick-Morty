@@ -5,7 +5,12 @@ import "./characterCard.scss";
 function CharacterCard({ card }) {
   return (
     <div className="cardCharacter">
-      <img src={card.image} alt={card.name} className="cardCharacter__img" />{" "}
+      <img
+        src={card.image}
+        alt={card.name}
+        title={card.name}
+        className="cardCharacter__img"
+      />{" "}
       <p className="cardCharacter__container">
         {card.name} <SpeciesIcons species={card.species} />{" "}
         <StatusIcons status={card.status} />

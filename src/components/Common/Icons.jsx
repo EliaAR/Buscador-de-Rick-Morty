@@ -15,54 +15,97 @@ function SpeciesIcons({ species }) {
       />
     );
   } else if (species === "Alien") {
-    return <i className="fas fa-hand-spock icon__species" title="Alien"></i>;
+    return (
+      <i
+        className="fas fa-hand-spock icon__species"
+        alt="Alien"
+        title="Alien"
+      ></i>
+    );
   } else if (species === "Humanoid") {
     return (
-      <i className="fas fa-user-astronaut icon__species" title="Humanoid"></i>
+      <i
+        className="fas fa-user-astronaut icon__species"
+        alt="Humanoid"
+        title="Humanoid"
+      ></i>
     );
   } else if (species === "Mythological Creature") {
     return (
       <i
         className="fas fa-dragon icon__species"
+        alt="Mythological Creature"
         title="Mythological Creature"
       ></i>
     );
   } else if (species === "Animal") {
-    return <i className="fas fa-paw icon__species" title="Animal"></i>;
+    return (
+      <i className="fas fa-paw icon__species" alt="Animal" title="Animal"></i>
+    );
   } else if (species === "Robot") {
-    return <i className="fas fa-robot icon__species" title="Robot"></i>;
+    return (
+      <i className="fas fa-robot icon__species" alt="Robot" title="Robot"></i>
+    );
   } else if (species === "Disease") {
-    return <i className="fas fa-disease icon__species" title="Disease"></i>;
+    return (
+      <i
+        className="fas fa-disease icon__species"
+        alt="Disease"
+        title="Disease"
+      ></i>
+    );
   } else if (species === "Planet") {
     return (
-      <i className="fas fa-globe-americas icon__species" title="Planet"></i>
+      <i
+        className="fas fa-globe-americas icon__species"
+        alt="Planet"
+        title="Planet"
+      ></i>
     );
   } else if (species === "Cronenberg") {
     return (
       <img
+        className="icon__species icon__cronenberg"
         src={cronenbergShadow}
         alt="Cronenberg"
         title="Cronenberg"
-        className="icon__species icon__cronenberg"
       />
     );
   } else {
     return (
-      <i className="fas fa-question-circle icon__species" title="Unknown"></i>
+      <i
+        className="fas fa-question-circle icon__species"
+        alt="Unknown"
+        title="Unknown"
+      ></i>
     );
   }
 }
 
 function StatusIcons({ status }) {
   if (status === "Alive") {
-    return <i className="fas fa-heartbeat icon__status" title="Alive"></i>;
+    return (
+      <i
+        className="fas fa-heartbeat icon__status"
+        alt="Alive"
+        title="Alive"
+      ></i>
+    );
   } else if (status === "Dead") {
     return (
-      <i className="fas fa-skull-crossbones icon__status" title="Dead"></i>
+      <i
+        className="fas fa-skull-crossbones icon__status"
+        alt="Dead"
+        title="Dead"
+      ></i>
     );
   } else {
     return (
-      <i className="fas fa-question-circle icon__status" title="Unknown"></i>
+      <i
+        className="fas fa-question-circle icon__status"
+        alt="Unknown"
+        title="Unknown"
+      ></i>
     );
   }
 }

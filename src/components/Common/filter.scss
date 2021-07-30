@@ -34,8 +34,13 @@
   }
 
   &__options {
-    background: linear-gradient(to bottom, #3b634a 0%, #3b634a 100%);
+    background-color: rgba(10, 51, 25, 0.6);
     text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    color: rgba(00, 45, 45, 0.75);
+  }
+
+  &__option:hover {
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   &__label {

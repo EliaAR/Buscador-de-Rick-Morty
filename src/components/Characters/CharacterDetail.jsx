@@ -35,10 +35,19 @@ function CharacterDetail() {
           <div className="characterDetail__card">
             <CharacterCard card={singleCharacter} />
             <p className="characterDetail__paragraph">
-              Número de episodios: {singleCharacter.episode}
+              Tipo: {singleCharacter.type}
             </p>
             <p className="characterDetail__paragraph">
               Planeta de origen: {singleCharacter.origin}
+            </p>
+            <p className="characterDetail__paragraph">
+              Última localización: {singleCharacter.location}
+            </p>
+            <p className="characterDetail__paragraph">
+              Núm. episodios: {singleCharacter.episode}
+            </p>
+            <p className="characterDetail__paragraph characterDetail__episodeList">
+              Episodios concretos
             </p>
           </div>
         </main>
