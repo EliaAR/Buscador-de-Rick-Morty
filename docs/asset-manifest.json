@@ -1,32 +1,35 @@
 {
   "files": {
-    "main.css": "./static/css/main.fe06afbb.chunk.css",
-    "main.js": "./static/js/main.ca025ff0.chunk.js",
-    "main.js.map": "./static/js/main.ca025ff0.chunk.js.map",
+    "main.css": "./static/css/main.4d18f815.chunk.css",
+    "main.js": "./static/js/main.0986d78f.chunk.js",
+    "main.js.map": "./static/js/main.0986d78f.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.946cf57e.js",
     "runtime-main.js.map": "./static/js/runtime-main.946cf57e.js.map",
-    "static/js/2.2db30f11.chunk.js": "./static/js/2.2db30f11.chunk.js",
-    "static/js/2.2db30f11.chunk.js.map": "./static/js/2.2db30f11.chunk.js.map",
+    "static/js/2.e63bb554.chunk.js": "./static/js/2.e63bb554.chunk.js",
+    "static/js/2.e63bb554.chunk.js.map": "./static/js/2.e63bb554.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.fe06afbb.chunk.css.map": "./static/css/main.fe06afbb.chunk.css.map",
-    "static/js/2.2db30f11.chunk.js.LICENSE.txt": "./static/js/2.2db30f11.chunk.js.LICENSE.txt",
+    "static/css/main.4d18f815.chunk.css.map": "./static/css/main.4d18f815.chunk.css.map",
+    "static/js/2.e63bb554.chunk.js.LICENSE.txt": "./static/js/2.e63bb554.chunk.js.LICENSE.txt",
     "static/media/errorRouteMsg.scss": "./static/media/Rick&MortyPersonaje.0093dad7.png",
     "static/media/Title.654c2328.png": "./static/media/Title.654c2328.png",
     "static/media/homePage.scss": "./static/media/background.28a99358.jpeg",
-    "static/media/characterDetail.scss": "./static/media/loading.f8fb5019.png",
+    "static/media/episodeDetail.scss": "./static/media/backgroundGreen.36e4d40b.png",
+    "static/media/bury.6d206b25.jpg": "./static/media/bury.6d206b25.jpg",
     "static/media/citadel.cc6edba8.png": "./static/media/citadel.cc6edba8.png",
     "static/media/cronenbergShadow.0a191e02.png": "./static/media/cronenbergShadow.0a191e02.png",
     "static/media/episodePage.scss": "./static/media/facesGreen.b9668701.png",
+    "static/media/characterDetail.scss": "./static/media/loading.f8fb5019.png",
     "static/media/meeUnf.2569b740.png": "./static/media/meeUnf.2569b740.png",
     "static/media/pickleRickUnfi.107f110d.png": "./static/media/pickleRickUnfi.107f110d.png",
     "static/media/locationPage.scss": "./static/media/rick&mortyComic.c15e0858.png",
     "static/media/seatUnf.c065c862.png": "./static/media/seatUnf.c065c862.png",
+    "static/media/sunShouting.080f578b.png": "./static/media/sunShouting.080f578b.png",
     "static/media/characterPage.scss": "./static/media/texturaRick&Morty.7411c6b9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.946cf57e.js",
-    "static/js/2.2db30f11.chunk.js",
-    "static/css/main.fe06afbb.chunk.css",
-    "static/js/main.ca025ff0.chunk.js"
+    "static/js/2.e63bb554.chunk.js",
+    "static/css/main.4d18f815.chunk.css",
+    "static/js/main.0986d78f.chunk.js"
   ]
 }
