@@ -7,19 +7,44 @@
   background-size: 250px;
   background-repeat: repeat;
 
-  &__link {
+  &__linkContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 22px;
+    height: 27px;
     background-color: rgba(0, 0, 0, 0.75);
+    border-left: 0;
     color: #c9ddc2;
-    font-family: "Asap", sans-serif;
+    font-family: "Fresca", sans-serif;
+    font-size: 17px;
   }
 
   &__card {
+    display: flex;
+    flex-direction: column;
     padding-top: 20px;
+  }
+
+  &__img {
+    align-self: center;
+    width: 250px;
+    border: 3px solid #444343;
+    border-radius: 15px;
+  }
+
+  &__paragraphContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 2px;
+    height: 25px;
+    background-color: black;
+    border-radius: 15px;
+    color: #777676;
+    font-family: "Bubblegum Sans", cursive;
   }
 
   &__paragraph {
@@ -35,8 +60,34 @@
     font-family: "Bubblegum Sans", cursive;
   }
 
+  &__tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    height: 25px;
+    background-color: black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #777676;
+    font-family: "Bubblegum Sans", cursive;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
   &__episodeList {
     margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    color: #777676;
+    font-family: "Bubblegum Sans", cursive;
+  }
+
+  &__episodeOne {
+    text-decoration: none;
+    color: #8f8e8e;
   }
 
   &__errorMsg {
@@ -66,12 +117,21 @@
   }
 
   @media (min-width: 768px) {
-    &__link {
-      height: 50px;
-      font-size: 30px;
+    &__linkContainer {
+      height: 40px;
+      font-size: 25px;
     }
     &__card {
       padding-top: 100px;
+    }
+    &__img {
+      width: 350px;
+    }
+    &__paragraph,
+    &__tittle,
+    &__episodeOne,
+    &__paragraphContainer {
+      font-size: 20px;
     }
     &__errorMsg {
       background-size: 650px;

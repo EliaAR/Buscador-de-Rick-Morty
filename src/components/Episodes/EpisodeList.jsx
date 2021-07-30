@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { EpisodeCard } from "./EpisodeCard";
 import { PrintErrorMsg } from "../../utils/indexUtils";
 import bury from "../../images/bury.jpg";
@@ -38,9 +39,15 @@ function EpisodeList({
               return 0;
             })
             .map((card) => (
-              <li key={card.id} className="episodeList__item">
-                <EpisodeCard card={card} />
-              </li>
+              <Link
+                to={`/episodedetail/${card.id}`}
+                key={card.id}
+                className="episodeList__link"
+              >
+                <li className="episodeList__item">
+                  <EpisodeCard card={card} />
+                </li>
+              </Link>
             ))}
         </ul>
       )}

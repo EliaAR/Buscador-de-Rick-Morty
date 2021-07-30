@@ -16,7 +16,7 @@ function App() {
         <Route path="/characterPage" exact component={CharacterPage}></Route>
         <Route path="/locationPage" exact component={LocationPage}></Route>
         <Route path="/episodePage" exact component={EpisodePage}></Route>
-        <Route path="/characterdetails/:id" component={CharacterDetail} />
+        <Route path="/characterdetail/:id" component={CharacterDetail} />
         <Route path="/episodedetail/:id" component={EpisodeDetail} />
         <Route path="" component={ErrorRouteMsg} />
       </Switch>

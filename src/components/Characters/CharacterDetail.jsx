@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Header } from "../Common/Header";
-import { CharacterCard } from "./CharacterCard";
+import { SpeciesIcons, StatusIcons } from "../Common/Icons";
 import { Footer } from "../Common/Footer";
 import { GetArrayId } from "../../utils/indexUtils";
 import { DataSingleCharacterAPI } from "../../Service/DataAPI";
@@ -13,6 +14,11 @@ function CharacterDetail() {
   const [singleCharacter, setSingleCharacter] = useState();
   const [error, setError] = useState(false);
   let { id } = useParams();
+
+  let history = useHistory();
+  const goToPreviousPath = () => {
+    history.goBack();
+  };
 
   useEffect(() => {
     setError(false);
@@ -31,16 +37,35 @@ function CharacterDetail() {
       <>
         <Header />
         <main className="characterDetail">
-          <Link to="/characterPage" className="characterDetail__link">
-            <i className="fas fa-angle-double-left">
-              Volver al Buscador de personajes
-            </i>
+          <Link to="/characterPage" className="characterDetail__linkContainer">
+            <i className="fas fa-angle-double-left"></i>
+            Ir al Buscador de personajes
           </Link>
+          <button
+            onClick={goToPreviousPath}
+            className="characterDetail__linkContainer"
+          >
+            <i className="fas fa-angle-double-left"></i>
+            Volver atrás
+          </button>
+
           <div className="characterDetail__card">
-            <CharacterCard card={singleCharacter} />
-            <p className="characterDetail__paragraph">
-              Tipo: {singleCharacter.type}
+            <img
+              src={singleCharacter.image}
+              alt={singleCharacter.name}
+              title={singleCharacter.name}
+              className="characterDetail__img"
+            />{" "}
+            <p className="characterDetail__paragraphContainer">
+              {singleCharacter.name}{" "}
+              <SpeciesIcons species={singleCharacter.species} />{" "}
+              <StatusIcons status={singleCharacter.status} />
             </p>
+            {singleCharacter.type ? (
+              <p className="characterDetail__paragraph">
+                Tipo: {singleCharacter.type}
+              </p>
+            ) : null}
             <p className="characterDetail__paragraph">
               Planeta de origen: {singleCharacter.origin}
             </p>
@@ -48,12 +73,13 @@ function CharacterDetail() {
               Última localización: {singleCharacter.location}
             </p>
             <div>
-              <h3>Episodios en los que aparece</h3>
-              {singleCharacter.episode}
-              <ul>
+              <h3 className="characterDetail__tittle">
+                Episodios en los que aparece
+              </h3>
+              <ul className="characterDetail__episodeList">
                 {ArrayIdEpisode.map((id) => (
                   <Link to={`/episodedetail/${id}`} key={id}>
-                    <li>cosita</li>
+                    <li className="characterDetail__episodeOne">Cosita</li>
                   </Link>
                 ))}
               </ul>

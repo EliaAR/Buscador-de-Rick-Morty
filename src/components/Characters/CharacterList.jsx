@@ -41,7 +41,7 @@ function CharacterList({
             })
             .map((card) => (
               <Link
-                to={`/characterdetails/${card.id}`}
+                to={`/characterdetail/${card.id}`}
                 key={card.id}
                 className="characterList__link"
               >
