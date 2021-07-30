@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PrintErrorMsg } from "../../utils/printErrorMsg";
+import { PrintErrorMsg } from "../../utils/indexUtils";
 import { CharacterCard } from "./CharacterCard";
 import sunShouting from "../../images/sunShouting.png";
 import "./characterList.scss";

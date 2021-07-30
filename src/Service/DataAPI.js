@@ -17,8 +17,6 @@ function DataCharacterAPI(params = {}) {
           status: character.status,
           species: character.species,
           image: character.image,
-          episode: character.episode.length,
-          origin: character.origin.name,
         };
       });
       return { characterArray, totalPages: response.info.pages };
@@ -35,9 +33,11 @@ function DataSingleCharacterAPI(id) {
         name: response.name,
         status: response.status,
         species: response.species,
+        type: response.type,
         image: response.image,
-        episode: response.episode.length,
+        episode: response.episode,
         origin: response.origin.name,
+        location: response.location.name,
       };
     });
 }
@@ -92,9 +92,25 @@ function DataEpisodeAPI(params = {}) {
     });
 }
 
+function DataSingleEpisodeAPI(id) {
+  const ENDPOINT = "https://rickandmortyapi.com/api/episode/";
+  return fetch(ENDPOINT + id)
+    .then((response) => response.json())
+    .then((response) => {
+      return {
+        id: response.id,
+        name: response.name,
+        air_date: response.air_date,
+        episode: response.episode,
+        characters: response.characters,
+      };
+    });
+}
+
 export {
   DataCharacterAPI,
   DataSingleCharacterAPI,
   DataLocationAPI,
   DataEpisodeAPI,
+  DataSingleEpisodeAPI,
 };

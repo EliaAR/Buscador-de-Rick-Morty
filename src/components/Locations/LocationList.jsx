@@ -1,5 +1,5 @@
 import { LocationCard } from "./LocationCard";
-import { PrintErrorMsg } from "../../utils/printErrorMsg";
+import { PrintErrorMsg } from "../../utils/indexUtils";
 import "./locationList.scss";
 
 function LocationList({

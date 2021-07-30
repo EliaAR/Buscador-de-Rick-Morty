@@ -1,5 +1,5 @@
 import { EpisodeCard } from "./EpisodeCard";
-import { PrintErrorMsg } from "../../utils/printErrorMsg";
+import { PrintErrorMsg } from "../../utils/indexUtils";
 import bury from "../../images/bury.jpg";
 import "./episodeList.scss";
 

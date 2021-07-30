@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Header } from "../Common/Header";
 import { CharacterCard } from "./CharacterCard";
 import { Footer } from "../Common/Footer";
+import { GetArrayId } from "../../utils/indexUtils";
 import { DataSingleCharacterAPI } from "../../Service/DataAPI";
 import "./characterDetail.scss";
 
@@ -23,6 +24,9 @@ function CharacterDetail() {
   }, [id]);
 
   if (singleCharacter) {
+    let ArrayIdEpisode = GetArrayId(singleCharacter.episode);
+    console.log(ArrayIdEpisode);
+
     return (
       <>
         <Header />
@@ -43,12 +47,17 @@ function CharacterDetail() {
             <p className="characterDetail__paragraph">
               Última localización: {singleCharacter.location}
             </p>
-            <p className="characterDetail__paragraph">
-              Núm. episodios: {singleCharacter.episode}
-            </p>
-            <p className="characterDetail__paragraph characterDetail__episodeList">
-              Episodios concretos
-            </p>
+            <div>
+              <h3>Episodios en los que aparece</h3>
+              {singleCharacter.episode}
+              <ul>
+                {ArrayIdEpisode.map((id) => (
+                  <Link to={`/episodedetail/${id}`} key={id}>
+                    <li>cosita</li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
           </div>
         </main>
         <Footer />
