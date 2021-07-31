@@ -1,4 +1,5 @@
 import { Filter } from "../Common/Filter";
+import { Submit } from "../Common/Submit";
 import { Reset } from "../Common/Reset";
 import "../Common/filter.scss";
 import "./locationFilters.scss";
@@ -86,6 +87,7 @@ function LocationFilters({
   onChangeSelectType,
   selectDimension,
   onChangeSelectDimension,
+  onClickSubmit,
   onClickReset,
 }) {
   return (
@@ -119,7 +121,10 @@ function LocationFilters({
         textOption="Todos los estados"
         options={allDimensions}
       />
-      <Reset onClickReset={onClickReset} />
+      <div>
+        <Submit onClickSubmit={onClickSubmit} />
+        <Reset onClickReset={onClickReset} />
+      </div>
     </form>
   );
 }

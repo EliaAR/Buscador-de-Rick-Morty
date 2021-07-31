@@ -1,4 +1,5 @@
 import { Filter } from "../Common/Filter";
+import { Submit } from "../Common/Submit";
 import { Reset } from "../Common/Reset";
 import "../Common/filter.scss";
 
@@ -25,6 +26,7 @@ function CharacterFilters({
   onChangeSelectSpecies,
   selectStatus,
   onChangeSelectStatus,
+  onClickSubmit,
   onClickReset,
 }) {
   return (
@@ -55,7 +57,10 @@ function CharacterFilters({
         textOption="Todos los estados"
         options={allStatus}
       />
-      <Reset onClickReset={onClickReset} />
+      <div>
+        <Submit onClickSubmit={onClickSubmit} />
+        <Reset onClickReset={onClickReset} />
+      </div>
     </form>
   );
 }

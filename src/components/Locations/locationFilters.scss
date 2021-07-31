@@ -1,11 +1,21 @@
 .formLocation {
   background-color: rgba(1, 50, 67, 0.55);
 
+  .form__labelName {
+    font-size: 14px;
+  }
+
   .form__input {
     color: #adacac;
   }
 
   .form__inputName::placeholder {
     color: #adacac;
+  }
+
+  @media (min-width: 768px) {
+    .form__labelName {
+      font-size: 23px;
+    }
   }
 }

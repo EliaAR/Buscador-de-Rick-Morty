@@ -37,7 +37,7 @@ function EpisodeDetail() {
         <main className="episodeDetail">
           <Link to="/episodePage" className="episodeDetail__linkContainer">
             <i className="fas fa-angle-double-left"></i>
-            Volver al Buscador de episodios
+            Ir al Buscador de episodios
           </Link>
           <button
             onClick={goToPreviousPath}

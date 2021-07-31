@@ -1,4 +1,5 @@
 import { Filter } from "../Common/Filter";
+import { Submit } from "../Common/Submit";
 import { Reset } from "../Common/Reset";
 import "../Common/filter.scss";
 
@@ -51,6 +52,7 @@ function EpisodeFilter({
   onChangeSearchValueEpisode,
   selectEpisode,
   onChangeSelectEpisode,
+  onClickSubmit,
   onClickReset,
 }) {
   return (
@@ -72,7 +74,10 @@ function EpisodeFilter({
         textOption="Todos los tipos"
         options={allEpisodes}
       />
-      <Reset onClickReset={onClickReset} />
+      <div>
+        <Submit onClickSubmit={onClickSubmit} />
+        <Reset onClickReset={onClickReset} />
+      </div>
     </form>
   );
 }

@@ -29,32 +29,41 @@ function LocationPage() {
     GetLocalStorage("currentPageLocation", 1)
   );
   const [error, setError] = useState(false);
+  const [callAPI, setCallAPI] = useState(true);
 
   useEffect(() => {
-    setError(false);
-    DataLocationAPI({
-      name: searchValueLocation,
-      type: selectType,
-      dimension: selectDimension,
-      page: currentPageLocation,
-    })
-      .then(({ locationArray, totalPages }) => {
-        setDataLocation(locationArray);
-        setPagesLocation(totalPages);
-        SetLocalStorage("locationArray", locationArray);
-        SetLocalStorage("pagesLocation", totalPages);
+    if (callAPI) {
+      setError(false);
+      setCallAPI(false);
+      DataLocationAPI({
+        name: searchValueLocation,
+        type: selectType,
+        dimension: selectDimension,
+        page: currentPageLocation,
       })
-      .catch((error) => setError(true));
-  }, [searchValueLocation, selectType, selectDimension, currentPageLocation]);
+        .then(({ locationArray, totalPages }) => {
+          setDataLocation(locationArray);
+          setPagesLocation(totalPages);
+          SetLocalStorage("locationArray", locationArray);
+          SetLocalStorage("pagesLocation", totalPages);
+        })
+        .catch((error) => setError(true));
+    }
+  }, [
+    searchValueLocation,
+    selectType,
+    selectDimension,
+    currentPageLocation,
+    callAPI,
+  ]);
 
   return (
     <>
       <Header />
       <main className="mainLocation">
         <Link to="/" className="mainLocation__link">
-          <i className="fas fa-angle-double-left">
-            Volver a la página principal
-          </i>
+          <i className="fas fa-angle-double-left"> </i>
+          Volver a la página principal
         </Link>
         <p className="mainLocation__paragraph">Búsqueda de localizaciones</p>
         <LocationFilters
@@ -76,6 +85,7 @@ function LocationPage() {
             SetLocalStorage("selectDimension", evt.currentTarget.value);
             setCurrentPageLocation(1);
           }}
+          onClickSubmit={() => setCallAPI(true)}
           onClickReset={() => {
             setSearchValueLocation("");
             SetLocalStorage("setSearchValueLocation", "");
@@ -84,6 +94,7 @@ function LocationPage() {
             setSelectDimension("");
             SetLocalStorage("selectDimension", "");
             setCurrentPageLocation(1);
+            setCallAPI(true);
           }}
         />
         {!error ? (
@@ -93,11 +104,13 @@ function LocationPage() {
             onClickBefore={() => {
               if (currentPageLocation >= 2) {
                 setCurrentPageLocation(currentPageLocation - 1);
+                setCallAPI(true);
               }
             }}
             onClickAfter={() => {
               if (currentPageLocation < pagesLocation) {
                 setCurrentPageLocation(currentPageLocation + 1);
+                setCallAPI(true);
               }
             }}
           />

@@ -26,30 +26,34 @@ function EpisodePage() {
     GetLocalStorage("currentPageEpisode", 1)
   );
   const [error, setError] = useState(false);
+  const [callAPI, setCallAPI] = useState(true);
 
   useEffect(() => {
-    setError(false);
-    DataEpisodeAPI({
-      name: searchValueEpisode,
-      episode: selectEpisode,
-      page: currentPageEpisode,
-    })
-      .then(({ episodeArray, totalPages }) => {
-        setDataEpisode(episodeArray);
-        setPagesEpisode(totalPages);
-        SetLocalStorage("episodeArray", episodeArray);
-        SetLocalStorage("pagesEpisode", totalPages);
+    if (callAPI) {
+      setError(false);
+      setCallAPI(false);
+      DataEpisodeAPI({
+        name: searchValueEpisode,
+        episode: selectEpisode,
+        page: currentPageEpisode,
       })
-      .catch((error) => setError(true));
-  }, [searchValueEpisode, selectEpisode, currentPageEpisode]);
+        .then(({ episodeArray, totalPages }) => {
+          setDataEpisode(episodeArray);
+          setPagesEpisode(totalPages);
+          SetLocalStorage("episodeArray", episodeArray);
+          SetLocalStorage("pagesEpisode", totalPages);
+        })
+        .catch((error) => setError(true));
+    }
+  }, [searchValueEpisode, selectEpisode, currentPageEpisode, callAPI]);
+
   return (
     <>
       <Header />
       <main className="mainEpisode">
         <Link to="/" className="mainEpisode__link">
-          <i className="fas fa-angle-double-left">
-            Volver a la página principal
-          </i>
+          <i className="fas fa-angle-double-left"></i>
+          Volver a la página principal
         </Link>
         <p className="mainEpisode__paragraph">Búsqueda de episodios</p>
         <EpisodeFilter
@@ -65,12 +69,14 @@ function EpisodePage() {
             SetLocalStorage("selectEpisode", evt.currentTarget.value);
             setCurrentPageEpisode(1);
           }}
+          onClickSubmit={() => setCallAPI(true)}
           onClickReset={() => {
             setSearchValueEpisode("");
             SetLocalStorage("setSearchValueEpisode", "");
             setSelectEpisode("");
             SetLocalStorage("selectEpisode", "");
             setCurrentPageEpisode(1);
+            setCallAPI(true);
           }}
         />
         {!error ? (
@@ -80,11 +86,13 @@ function EpisodePage() {
             onClickBefore={() => {
               if (currentPageEpisode >= 2) {
                 setCurrentPageEpisode(currentPageEpisode - 1);
+                setCallAPI(true);
               }
             }}
             onClickAfter={() => {
               if (currentPageEpisode < pagesEpisode) {
                 setCurrentPageEpisode(currentPageEpisode + 1);
+                setCallAPI(true);
               }
             }}
           />

@@ -25,32 +25,35 @@ function CharacterPage() {
     GetLocalStorage("currentPage", 1)
   );
   const [error, setError] = useState(false);
+  const [callAPI, setCallAPI] = useState(true);
 
   useEffect(() => {
-    setError(false);
-    DataCharacterAPI({
-      name: searchValueName,
-      species: selectSpecies,
-      status: selectStatus,
-      page: currentPage,
-    })
-      .then(({ characterArray, totalPages }) => {
-        setData(characterArray);
-        setPages(totalPages);
-        SetLocalStorage("characterArray", characterArray);
-        SetLocalStorage("pages", totalPages);
+    if (callAPI) {
+      setError(false);
+      setCallAPI(false);
+      DataCharacterAPI({
+        name: searchValueName,
+        species: selectSpecies,
+        status: selectStatus,
+        page: currentPage,
       })
-      .catch((error) => setError(true));
-  }, [searchValueName, selectSpecies, selectStatus, currentPage]);
+        .then(({ characterArray, totalPages }) => {
+          setData(characterArray);
+          setPages(totalPages);
+          SetLocalStorage("characterArray", characterArray);
+          SetLocalStorage("pages", totalPages);
+        })
+        .catch((error) => setError(true));
+    }
+  }, [searchValueName, selectSpecies, selectStatus, currentPage, callAPI]);
 
   return (
     <>
       <Header />
       <main className="mainCharacter">
         <Link to="/" className="mainCharacter__link">
-          <i className="fas fa-angle-double-left">
-            Volver a la página principal
-          </i>
+          <i className="fas fa-angle-double-left"></i>
+          Volver a la página principal
         </Link>
         <p className="mainCharacter__paragraph">Búsqueda de personajes</p>
         <CharacterFilters
@@ -72,6 +75,7 @@ function CharacterPage() {
             SetLocalStorage("selectStatus", evt.currentTarget.value);
             setCurrentPage(1);
           }}
+          onClickSubmit={() => setCallAPI(true)}
           onClickReset={() => {
             setSearchValueName("");
             SetLocalStorage("searchValueName", "");
@@ -80,6 +84,7 @@ function CharacterPage() {
             setSelectStatus("");
             SetLocalStorage("selectStatus", "");
             setCurrentPage(1);
+            setCallAPI(true);
           }}
         />
         {!error ? (
@@ -89,11 +94,13 @@ function CharacterPage() {
             onClickBefore={() => {
               if (currentPage >= 2) {
                 setCurrentPage(currentPage - 1);
+                setCallAPI(true);
               }
             }}
             onClickAfter={() => {
               if (currentPage < pages) {
                 setCurrentPage(currentPage + 1);
+                setCallAPI(true);
               }
             }}
           />
