@@ -16,44 +16,71 @@
     width: 100%;
     height: 22px;
     background-color: rgba(0, 0, 0, 0.75);
+    border-left: 0;
     color: #c9ddc2;
     font-family: "Fresca", sans-serif;
     font-size: 17px;
   }
 
+  &__cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 20px 50px 20px;
+  }
+
   &__card {
-    margin: 100px 20px 100px 20px;
+    margin-bottom: 30px;
+    width: 300px;
+    border-radius: 10px;
   }
 
   &__name {
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: rgba(53, 141, 158, 0.8);
     border: 1px solid black;
-    border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(53, 141, 158, 0.8);
     color: rgba(23, 22, 22, 0.95);
     font-size: 20px;
     text-transform: uppercase;
   }
-
-  &__paragraph {
-    padding-bottom: 5px;
-    padding-top: 5px;
+  &__paragraphContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
     background-color: rgba(36, 34, 34, 0.95);
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     color: rgb(212, 211, 211);
   }
 
   &__tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    background-color: black;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     font-size: 16px;
     font-weight: normal;
     text-transform: uppercase;
+    color: #777676;
   }
 
   &__episodeList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
     margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.75);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -62,9 +89,18 @@
     font-family: "Bubblegum Sans", cursive;
   }
 
-  &__episodeOne {
+  &__episodeLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     color: #8f8e8e;
+  }
+
+  &__episodeImg {
+    width: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
   }
 
   @media (min-width: 768px) {
@@ -72,8 +108,20 @@
       height: 40px;
       font-size: 20px;
     }
+    &__card {
+      width: 500px;
+    }
+    &__paragraphContainer {
+      height: 90px;
+    }
     &__name {
       font-size: 27px;
+    }
+    &__episodeList {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
     &__paragraph,
     &__episodeOne {

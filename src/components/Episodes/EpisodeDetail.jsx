@@ -5,11 +5,15 @@ import { useEffect, useState } from "react";
 import { Header } from "../Common/Header";
 import { Footer } from "../Common/Footer";
 import { GetArrayId } from "../../utils/indexUtils";
-import { DataSingleEpisodeAPI } from "../../Service/DataAPI";
+import {
+  DataSingleEpisodeAPI,
+  DataSingleCharacterAPI,
+} from "../../Service/DataAPI";
 import "./episodeDetail.scss";
 
 function EpisodeDetail() {
   const [singleEpisode, setSingleEpisode] = useState();
+  const [charactersForTheEpisode, setCharactersForTheEpisode] = useState([]);
   const [error, setError] = useState(false);
   let { id } = useParams();
 
@@ -27,10 +31,21 @@ function EpisodeDetail() {
       .catch((error) => setError(true));
   }, [id]);
 
-  if (singleEpisode) {
-    let ArrayIdCharacter = GetArrayId(singleEpisode.characters);
-    console.log(ArrayIdCharacter);
+  useEffect(() => {
+    if (singleEpisode) {
+      let ArrayIdCharacter = GetArrayId(singleEpisode.characters);
+      let ArrayPromises = ArrayIdCharacter.map((idCharacter) =>
+        DataSingleCharacterAPI(idCharacter)
+      );
+      Promise.all(ArrayPromises)
+        .then((charactersEpisode) => {
+          setCharactersForTheEpisode(charactersEpisode);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [singleEpisode]);
 
+  if (singleEpisode) {
     return (
       <>
         <Header />
@@ -46,23 +61,38 @@ function EpisodeDetail() {
             <i className="fas fa-angle-double-left"></i>
             Volver atrás
           </button>
-          <div className="episodeDetail__card">
-            <p className="episodeDetail__name"> {singleEpisode.name} </p>
-            <p className="episodeDetail__paragraph">
-              Fecha de estreno: {singleEpisode.air_date}
-            </p>
-            <p className="episodeDetail__paragraph">
-              Episodio: {singleEpisode.episode}
-            </p>
+          <div className="episodeDetail__cardContainer">
+            <div className="episodeDetail__card">
+              <p className="episodeDetail__name"> {singleEpisode.name} </p>
+              <div className="episodeDetail__paragraphContainer">
+                <p className="episodeDetail__paragraph">
+                  Fecha de estreno: {singleEpisode.air_date}
+                </p>
+                <p className="episodeDetail__paragraph">
+                  Episodio: {singleEpisode.episode}
+                </p>
+              </div>
+            </div>
             <div>
               <h3 className="episodeDetail__paragraph episodeDetail__tittle">
                 Personajes que aparecen
               </h3>
               <ul className="episodeDetail__episodeList">
-                {ArrayIdCharacter.map((id) => (
-                  <Link to={`/characterdetail/${id}`} key={id}>
-                    <li className="episodeDetail__episodeOne">Cosita</li>
-                  </Link>
+                {charactersForTheEpisode.map((character) => (
+                  <li className="episodeDetail__episodeOne">
+                    <Link
+                      to={`/characterdetail/${character.id}`}
+                      key={character.id}
+                      className="episodeDetail__episodeLink"
+                    >
+                      <img
+                        className="episodeDetail__episodeImg"
+                        src={character.image}
+                        alt={character.name}
+                      />{" "}
+                      <span>{character.name}</span>
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>

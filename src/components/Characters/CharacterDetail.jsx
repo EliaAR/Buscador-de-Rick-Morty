@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { Header } from "../Common/Header";
 import { SpeciesIcons, StatusIcons } from "../Common/Icons";
 import { Footer } from "../Common/Footer";
@@ -15,7 +14,7 @@ import "./characterDetail.scss";
 
 function CharacterDetail() {
   const [singleCharacter, setSingleCharacter] = useState();
-  const [episodesForTheCharacter, setepisodesForTheCharacter] = useState([]);
+  const [episodesForTheCharacter, setEpisodesForTheCharacter] = useState([]);
   const [error, setError] = useState(false);
   let { id } = useParams();
 
@@ -41,7 +40,7 @@ function CharacterDetail() {
       );
       Promise.all(ArrayPromises)
         .then((episodesCharacter) => {
-          setepisodesForTheCharacter(episodesCharacter);
+          setEpisodesForTheCharacter(episodesCharacter);
         })
         .catch((error) => console.log(error));
     }
@@ -141,8 +140,3 @@ function CharacterDetail() {
 }
 
 export { CharacterDetail };
-
-CharacterDetail.propTypes = {
-  episode: PropTypes.number,
-  origin: PropTypes.string,
-};
