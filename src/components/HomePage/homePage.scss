@@ -37,13 +37,25 @@
       height: 120px;
     }
     &__img {
+      padding-right: 20px;
       height: 120px;
+    }
+    &__imgMeeseeks,
+    &__imgEpisode {
+      padding-right: 50px;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     &__browsers {
       width: 600px;
+    }
+    &__img {
+      padding-right: 50px;
+    }
+    &__imgMeeseeks,
+    &__imgEpisode {
+      padding-right: 90px;
     }
   }
 }

@@ -1,20 +1,21 @@
 .cardCharacter {
   &__img {
     width: 250px;
-    border: 3px solid #444343;
+    border: 3px solid black;
     border-radius: 15px;
   }
 
   &__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 2px;
+    top: -20px;
     height: 25px;
+    width: 250px;
     background-color: black;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     color: #777676;
     font-family: "Bubblegum Sans", cursive;
   }
@@ -24,6 +25,8 @@
       width: 300px;
     }
     &__container {
+      height: 30px;
+      width: 300px;
       font-size: 20px;
     }
   }

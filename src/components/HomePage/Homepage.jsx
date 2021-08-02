@@ -19,7 +19,7 @@ function HomePage() {
             src={meeUnf}
             alt="Meeseeks"
             tittle="Meeseeks"
-            className="mainPrincipal__img"
+            className="mainPrincipal__img mainPrincipal__imgMeeseeks"
           />
           <p>Buscador por personajes</p>
         </Link>
@@ -43,7 +43,7 @@ function HomePage() {
             src={seatUnf}
             alt="The old man and the seat"
             tittle="The old man and the seat"
-            className="mainPrincipal__img"
+            className="mainPrincipal__img mainPrincipal__imgEpisode"
           />
           <p>Buscador por episodios</p>
         </Link>

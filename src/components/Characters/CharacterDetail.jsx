@@ -50,28 +50,39 @@ function CharacterDetail() {
           </button>
 
           <div className="characterDetail__card">
-            <img
-              src={singleCharacter.image}
-              alt={singleCharacter.name}
-              title={singleCharacter.name}
-              className="characterDetail__img"
-            />{" "}
-            <p className="characterDetail__paragraphContainer">
-              {singleCharacter.name}{" "}
-              <SpeciesIcons species={singleCharacter.species} />{" "}
-              <StatusIcons status={singleCharacter.status} />
-            </p>
-            {singleCharacter.type ? (
-              <p className="characterDetail__paragraph">
-                Tipo: {singleCharacter.type}
+            <div className="characterDetail__containerImg">
+              <img
+                src={singleCharacter.image}
+                alt={singleCharacter.name}
+                title={singleCharacter.name}
+                className="characterDetail__img"
+              />{" "}
+            </div>
+            <div className="characterDetail__containerMoreInfo">
+              <p className="characterDetail__paragraphContainer">
+                {singleCharacter.name}{" "}
+                <SpeciesIcons species={singleCharacter.species} />{" "}
+                <StatusIcons status={singleCharacter.status} />
               </p>
-            ) : null}
-            <p className="characterDetail__paragraph">
-              Planeta de origen: {singleCharacter.origin}
-            </p>
-            <p className="characterDetail__paragraph">
-              Última localización: {singleCharacter.location}
-            </p>
+              {singleCharacter.type ? (
+                <div>
+                  <p className="characterDetail__subject">Tipo:</p>
+                  <p className="characterDetail__paragraph">
+                    {singleCharacter.type}
+                  </p>
+                </div>
+              ) : null}
+
+              <p className="characterDetail__subject">Planeta de origen:</p>
+              <p className="characterDetail__paragraph">
+                {singleCharacter.origin}
+              </p>
+
+              <p className="characterDetail__subject">Última localización:</p>
+              <p className="characterDetail__paragraph">
+                {singleCharacter.location}
+              </p>
+            </div>
             <div>
               <h3 className="characterDetail__tittle">
                 Episodios en los que aparece
