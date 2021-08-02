@@ -15,16 +15,12 @@
     align-items: center;
     margin-right: 10px;
     margin-left: 10px;
+    width: 300px;
     background-color: rgba(0, 0, 0, 0.55);
     border: 2px solid black;
     text-align: center;
     font-family: "Kalam", cursive;
     color: #bcc2ba;
-  }
-
-  &__browsersMeeseeks,
-  &__browsersEpisode {
-    width: 300px;
   }
 
   &__img {

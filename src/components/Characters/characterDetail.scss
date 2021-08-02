@@ -20,17 +20,21 @@
     font-size: 17px;
   }
 
-  &__card {
+  &__cardContainer {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
   }
 
-  &__containerImg {
+  &__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  &__containerImg {
+    display: flex;
   }
 
   &__img {
@@ -41,10 +45,9 @@
   }
 
   &__containerMoreInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    margin-bottom: 20px;
     padding-right: 5px;
+    width: 250px;
     background-color: black;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -80,11 +83,11 @@
     margin-top: 2px;
     height: 25px;
     background-color: black;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     color: #777676;
     font-family: "Bubblegum Sans", cursive;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
   }
 
@@ -99,6 +102,8 @@
   }
 
   &__episodeOne {
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-decoration: none;
     color: #8f8e8e;
   }
@@ -134,16 +139,22 @@
       height: 40px;
       font-size: 20px;
     }
-    &__card {
+    &__cardContainer {
       padding-top: 100px;
     }
     &__img {
+      width: 350px;
+    }
+    &__containerMoreInfo {
       width: 350px;
     }
     &__paragraphContainer,
     &__subject,
     &__tittle {
       font-size: 25px;
+    }
+    &__tittle {
+      height: 30px;
     }
     &__paragraph,
     &__episodeOne {

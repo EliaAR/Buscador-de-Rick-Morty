@@ -11,10 +11,7 @@ function HomePage() {
     <>
       <Header />
       <main className="mainPrincipal">
-        <Link
-          to="/characterPage"
-          className="mainPrincipal__browsers mainPrincipal__browsersMeeseeks"
-        >
+        <Link to="/characterPage" className="mainPrincipal__browsers">
           <img
             src={meeUnf}
             alt="Meeseeks"
@@ -23,10 +20,7 @@ function HomePage() {
           />
           <p>Buscador por personajes</p>
         </Link>
-        <Link
-          to="/locationPage"
-          className="mainPrincipal__browsers mainPrincipal__browsersCidatel"
-        >
+        <Link to="/locationPage" className="mainPrincipal__browsers">
           <img
             src={citadel}
             alt="Ciudadela"
@@ -35,10 +29,7 @@ function HomePage() {
           />
           <p>Buscador por localizaciones</p>
         </Link>
-        <Link
-          to="/episodePage"
-          className="mainPrincipal__browsers mainPrincipal__browsersEpisode"
-        >
+        <Link to="/episodePage" className="mainPrincipal__browsers">
           <img
             src={seatUnf}
             alt="The old man and the seat"
