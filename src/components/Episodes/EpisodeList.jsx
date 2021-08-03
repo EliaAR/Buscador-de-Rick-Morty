@@ -11,9 +11,9 @@ function EpisodeList({
   dataEpisode,
 }) {
   return (
-    <div className="episodeList">
+    <section className="episodeList">
       {error ? (
-        <div className="episodeList__paragraph">
+        <article className="episodeList__paragraph">
           <img
             className="episodeList__img"
             src={bury}
@@ -25,7 +25,7 @@ function EpisodeList({
           <p className="episodeList__text">
             No está en la Base de datos o No existe
           </p>
-        </div>
+        </article>
       ) : (
         <ul className="episodeList__container">
           {dataEpisode.map((card) => (
@@ -37,7 +37,7 @@ function EpisodeList({
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
 

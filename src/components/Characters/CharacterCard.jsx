@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { SpeciesIcons, StatusIcons } from "../Common/Icons";
 import "./characterCard.scss";
 
@@ -19,9 +18,3 @@ function CharacterCard({ card }) {
   );
 }
 export { CharacterCard };
-
-CharacterCard.propTypes = {
-  name: PropTypes.string,
-  status: PropTypes.string,
-  species: PropTypes.object,
-};

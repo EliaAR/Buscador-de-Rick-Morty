@@ -28,7 +28,9 @@ function EpisodeDetail() {
       .then((episode) => {
         setSingleEpisode(episode);
       })
-      .catch((error) => setError(true));
+      .catch((error) => {
+        setError(true);
+      });
   }, [id]);
 
   useEffect(() => {
@@ -62,7 +64,7 @@ function EpisodeDetail() {
             Volver atrás
           </button>
           <section className="episodeDetail__cardContainer">
-            <section className="episodeDetail__card">
+            <article className="episodeDetail__card">
               <p className="episodeDetail__name"> {singleEpisode.name} </p>
               <div className="episodeDetail__paragraphContainer">
                 <p className="episodeDetail__paragraph">
@@ -72,11 +74,9 @@ function EpisodeDetail() {
                   Episodio: {singleEpisode.episode}
                 </p>
               </div>
-            </section>
-            <section>
-              <h3 className="episodeDetail__paragraph episodeDetail__tittle">
-                Personajes que aparecen
-              </h3>
+            </article>
+            <article>
+              <h3 className="episodeDetail__tittle">Personajes que aparecen</h3>
               <ul className="episodeDetail__episodeList">
                 {charactersForTheEpisode.map((character) => (
                   <li className="episodeDetail__episodeOne">
@@ -95,7 +95,7 @@ function EpisodeDetail() {
                   </li>
                 ))}
               </ul>
-            </section>
+            </article>
           </section>
         </main>
         <Footer />

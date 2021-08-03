@@ -103,6 +103,32 @@
     border-radius: 5px;
   }
 
+  &__errorMsg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-image: url(../../images/Rick&MortyPersonaje.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__pError {
+    background-color: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 40px;
+    font-family: "Creepster", cursive;
+    text-transform: uppercase;
+  }
+
+  &__loading {
+    min-height: 70vh;
+    background-image: url(../../images/loading.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   @media (min-width: 768px) {
     &__linkContainer {
       height: 40px;
@@ -124,8 +150,18 @@
       padding-bottom: 10px;
     }
     &__paragraph,
+    &__tittle,
     &__episodeOne {
       font-size: 20px;
+    }
+    &__errorMsg {
+      background-size: 650px;
+    }
+    &__pError {
+      font-size: 60px;
+    }
+    &__loading {
+      background-size: 600px;
     }
   }
 }

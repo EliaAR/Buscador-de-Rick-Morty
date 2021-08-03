@@ -13,14 +13,14 @@ function LocationList({
   return (
     <section className="locationList">
       {error ? (
-        <div className="locationList__paragraph">
+        <article className="locationList__paragraph">
           <p className="locationList__searchs">
             {PrintErrorMsg(searchValueLocation, selectType, selectDimension)}
           </p>
           <p className="locationList__text">
             No está en la Base de datos o No existe
           </p>
-        </div>
+        </article>
       ) : (
         <ul className="locationList__container">
           {dataLocation.map((card) => (

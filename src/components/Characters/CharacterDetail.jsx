@@ -29,7 +29,9 @@ function CharacterDetail() {
       .then((character) => {
         setSingleCharacter(character);
       })
-      .catch((error) => setError(true));
+      .catch((error) => {
+        setError(true);
+      });
   }, [id]);
 
   useEffect(() => {
@@ -64,7 +66,7 @@ function CharacterDetail() {
           </button>
 
           <section className="characterDetail__cardContainer">
-            <section className="characterDetail__card">
+            <article className="characterDetail__card">
               <section className="characterDetail__containerImg">
                 <img
                   src={singleCharacter.image}
@@ -98,8 +100,8 @@ function CharacterDetail() {
                   {singleCharacter.location}
                 </p>
               </section>
-            </section>
-            <section>
+            </article>
+            <article>
               <h3 className="characterDetail__tittle">
                 Episodios en los que aparece
               </h3>
@@ -112,7 +114,7 @@ function CharacterDetail() {
                   </Link>
                 ))}
               </ul>
-            </section>
+            </article>
           </section>
         </main>
         <Footer />

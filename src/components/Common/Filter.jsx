@@ -29,7 +29,7 @@ function Filter({
   } else {
     return (
       <section className="form__selectContainer">
-        <label htmlFor={id} className="form__label form__labelSelect">
+        <label htmlFor={id} className="form__label">
           {textLabel}
         </label>
         <select

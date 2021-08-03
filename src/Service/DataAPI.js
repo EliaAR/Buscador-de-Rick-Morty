@@ -28,6 +28,7 @@ function DataSingleCharacterAPI(id) {
   return fetch(ENDPOINT + id)
     .then((response) => response.json())
     .then((response) => {
+      if (response.error) throw new Error(response.error);
       return {
         id: response.id,
         name: response.name,
@@ -72,6 +73,7 @@ function DataSingleLocationAPI(id) {
   return fetch(ENDPOINT + id)
     .then((response) => response.json())
     .then((response) => {
+      if (response.error) throw new Error(response.error);
       return {
         id: response.id,
         name: response.name,
@@ -112,6 +114,7 @@ function DataSingleEpisodeAPI(id) {
   return fetch(ENDPOINT + id)
     .then((response) => response.json())
     .then((response) => {
+      if (response.error) throw new Error(response.error);
       return {
         id: response.id,
         name: response.name,

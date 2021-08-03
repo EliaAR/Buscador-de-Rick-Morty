@@ -6,7 +6,7 @@ function Sumary({ currentPage, pages, onClickBefore, onClickAfter }) {
       <p className="sumary__paragraph">
         Estás en la página {currentPage} del total de {pages} páginas
       </p>
-      <div>
+      <article>
         <button
           className="sumary__buttons sumary__before"
           onClick={onClickBefore}
@@ -19,7 +19,7 @@ function Sumary({ currentPage, pages, onClickBefore, onClickAfter }) {
         >
           Pagina siguiente
         </button>
-      </div>
+      </article>
     </section>
   );
 }

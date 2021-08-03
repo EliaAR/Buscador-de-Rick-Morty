@@ -12,9 +12,9 @@ function CharacterList({
   selectStatus,
 }) {
   return (
-    <div className="characterList">
+    <section className="characterList">
       {error ? (
-        <div className="characterList__paragraph">
+        <article className="characterList__paragraph">
           <img
             className="characterList__img"
             src={sunShouting}
@@ -26,7 +26,7 @@ function CharacterList({
           <p className="characterList__text">
             No está en la Base de datos o No existe
           </p>
-        </div>
+        </article>
       ) : (
         <ul className="characterList__container">
           {data.map((card) => (
@@ -42,7 +42,7 @@ function CharacterList({
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
 

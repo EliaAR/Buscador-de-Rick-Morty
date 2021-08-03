@@ -28,7 +28,9 @@ function LocationDetail() {
       .then((location) => {
         setSingleLocation(location);
       })
-      .catch((error) => setError(true));
+      .catch((error) => {
+        setError(true);
+      });
   }, [id]);
 
   useEffect(() => {
@@ -62,7 +64,7 @@ function LocationDetail() {
             Volver atrás
           </button>
           <section className="locationDetail__cardContainer">
-            <section className="locationDetail__card">
+            <article className="locationDetail__card">
               <p className="locationDetail__name"> {singleLocation.name} </p>
               <div className="locationDetail__paragraphContainer">
                 <p className="locationDetail__paragraph">
@@ -72,9 +74,9 @@ function LocationDetail() {
                   Dimensión: {singleLocation.dimension}
                 </p>
               </div>
-            </section>
-            <section>
-              <h3 className="locationDetail__paragraph locationDetail__tittle">
+            </article>
+            <article>
+              <h3 className="locationDetail__tittle">
                 Personajes que residen aquí
               </h3>
               {charactersForTheLocation.length ? (
@@ -103,7 +105,7 @@ function LocationDetail() {
                   Aquí no vive nadie
                 </p>
               )}
-            </section>
+            </article>
           </section>
         </main>
         <Footer />
@@ -114,7 +116,7 @@ function LocationDetail() {
       <>
         <Header />
         <main className="locationDetail__errorMsg">
-          <p className="locationDetail__pError">Episodio no encontrado</p>
+          <p className="locationDetail__pError">Localización no encontrada</p>
         </main>
         <Footer />
       </>
