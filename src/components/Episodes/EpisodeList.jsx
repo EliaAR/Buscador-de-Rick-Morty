@@ -28,27 +28,13 @@ function EpisodeList({
         </div>
       ) : (
         <ul className="episodeList__container">
-          {dataEpisode
-            .sort(function (a, b) {
-              if (a.name > b.name) {
-                return 1;
-              }
-              if (a.name < b.name) {
-                return -1;
-              }
-              return 0;
-            })
-            .map((card) => (
-              <Link
-                to={`/episodedetail/${card.id}`}
-                key={card.id}
-                className="episodeList__link"
-              >
-                <li className="episodeList__item">
-                  <EpisodeCard card={card} />
-                </li>
+          {dataEpisode.map((card) => (
+            <li className="episodeList__item" key={card.id}>
+              <Link to={`/episodedetail/${card.id}`}>
+                <EpisodeCard card={card} />
               </Link>
-            ))}
+            </li>
+          ))}
         </ul>
       )}
     </div>

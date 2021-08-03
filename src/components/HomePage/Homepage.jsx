@@ -18,7 +18,7 @@ function HomePage() {
             tittle="Meeseeks"
             className="mainPrincipal__img mainPrincipal__imgMeeseeks"
           />
-          <p>Buscador por personajes</p>
+          <span>Buscador por personajes</span>
         </Link>
         <Link to="/locationPage" className="mainPrincipal__browsers">
           <img
@@ -27,7 +27,7 @@ function HomePage() {
             tittle="Ciudadela"
             className="mainPrincipal__img"
           />
-          <p>Buscador por localizaciones</p>
+          <span>Buscador por localizaciones</span>
         </Link>
         <Link to="/episodePage" className="mainPrincipal__browsers">
           <img
@@ -36,7 +36,7 @@ function HomePage() {
             tittle="The old man and the seat"
             className="mainPrincipal__img mainPrincipal__imgEpisode"
           />
-          <p>Buscador por episodios</p>
+          <span>Buscador por episodios</span>
         </Link>
       </main>
       <Footer />

@@ -61,8 +61,8 @@ function EpisodeDetail() {
             <i className="fas fa-angle-double-left"></i>
             Volver atrás
           </button>
-          <div className="episodeDetail__cardContainer">
-            <div className="episodeDetail__card">
+          <section className="episodeDetail__cardContainer">
+            <section className="episodeDetail__card">
               <p className="episodeDetail__name"> {singleEpisode.name} </p>
               <div className="episodeDetail__paragraphContainer">
                 <p className="episodeDetail__paragraph">
@@ -72,8 +72,8 @@ function EpisodeDetail() {
                   Episodio: {singleEpisode.episode}
                 </p>
               </div>
-            </div>
-            <div>
+            </section>
+            <section>
               <h3 className="episodeDetail__paragraph episodeDetail__tittle">
                 Personajes que aparecen
               </h3>
@@ -95,8 +95,8 @@ function EpisodeDetail() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
+            </section>
+          </section>
         </main>
         <Footer />
       </>

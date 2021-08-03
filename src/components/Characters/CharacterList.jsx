@@ -29,27 +29,17 @@ function CharacterList({
         </div>
       ) : (
         <ul className="characterList__container">
-          {data
-            .sort(function (a, b) {
-              if (a.name > b.name) {
-                return 1;
-              }
-              if (a.name < b.name) {
-                return -1;
-              }
-              return 0;
-            })
-            .map((card) => (
-              <Link
-                to={`/characterdetail/${card.id}`}
-                key={card.id}
-                className="characterList__link"
-              >
-                <li className="characterList__item">
-                  <CharacterCard card={card} />
-                </li>
-              </Link>
-            ))}
+          {data.map((card) => (
+            <Link
+              to={`/characterdetail/${card.id}`}
+              key={card.id}
+              className="characterList__link"
+            >
+              <li className="characterList__item">
+                <CharacterCard card={card} />
+              </li>
+            </Link>
+          ))}
         </ul>
       )}
     </div>

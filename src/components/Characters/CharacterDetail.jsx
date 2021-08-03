@@ -63,17 +63,17 @@ function CharacterDetail() {
             Volver atrás
           </button>
 
-          <div className="characterDetail__cardContainer">
-            <div className="characterDetail__card">
-              <div className="characterDetail__containerImg">
+          <section className="characterDetail__cardContainer">
+            <section className="characterDetail__card">
+              <section className="characterDetail__containerImg">
                 <img
                   src={singleCharacter.image}
                   alt={singleCharacter.name}
                   title={singleCharacter.name}
                   className="characterDetail__img"
                 />{" "}
-              </div>
-              <div className="characterDetail__containerMoreInfo">
+              </section>
+              <section className="characterDetail__containerMoreInfo">
                 <p className="characterDetail__paragraphContainer">
                   {singleCharacter.name}{" "}
                   <SpeciesIcons species={singleCharacter.species} />{" "}
@@ -97,9 +97,9 @@ function CharacterDetail() {
                 <p className="characterDetail__paragraph">
                   {singleCharacter.location}
                 </p>
-              </div>
-            </div>
-            <div>
+              </section>
+            </section>
+            <section>
               <h3 className="characterDetail__tittle">
                 Episodios en los que aparece
               </h3>
@@ -112,8 +112,8 @@ function CharacterDetail() {
                   </Link>
                 ))}
               </ul>
-            </div>
-          </div>
+            </section>
+          </section>
         </main>
         <Footer />
       </>

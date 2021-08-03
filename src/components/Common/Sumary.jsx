@@ -2,7 +2,7 @@ import "./sumary.scss";
 
 function Sumary({ currentPage, pages, onClickBefore, onClickAfter }) {
   return (
-    <div className="sumary">
+    <section className="sumary">
       <p className="sumary__paragraph">
         Estás en la página {currentPage} del total de {pages} páginas
       </p>
@@ -20,7 +20,7 @@ function Sumary({ currentPage, pages, onClickBefore, onClickAfter }) {
           Pagina siguiente
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 

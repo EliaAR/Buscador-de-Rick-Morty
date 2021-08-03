@@ -71,7 +71,7 @@ function EpisodeFilter({
         textLabel="Escoge aquí un episodio"
         value={selectEpisode}
         onChangeSelect={onChangeSelectEpisode}
-        textOption="Todos los tipos"
+        textOption="Todos los episodios"
         options={allEpisodes}
       />
       <div>

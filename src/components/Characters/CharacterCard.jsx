@@ -4,7 +4,7 @@ import "./characterCard.scss";
 
 function CharacterCard({ card }) {
   return (
-    <div className="cardCharacter">
+    <section className="cardCharacter">
       <img
         src={card.image}
         alt={card.name}
@@ -15,7 +15,7 @@ function CharacterCard({ card }) {
         {card.name} <SpeciesIcons species={card.species} />{" "}
         <StatusIcons status={card.status} />
       </p>
-    </div>
+    </section>
   );
 }
 export { CharacterCard };

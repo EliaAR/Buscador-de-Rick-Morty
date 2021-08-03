@@ -1,6 +1,7 @@
 import { LocationCard } from "./LocationCard";
 import { PrintErrorMsg } from "../../utils/indexUtils";
 import "./locationList.scss";
+import { Link } from "react-router-dom";
 
 function LocationList({
   dataLocation,
@@ -10,7 +11,7 @@ function LocationList({
   selectDimension,
 }) {
   return (
-    <div className="locationList">
+    <section className="locationList">
       {error ? (
         <div className="locationList__paragraph">
           <p className="locationList__searchs">
@@ -22,24 +23,17 @@ function LocationList({
         </div>
       ) : (
         <ul className="locationList__container">
-          {dataLocation
-            .sort(function (a, b) {
-              if (a.name > b.name) {
-                return 1;
-              }
-              if (a.name < b.name) {
-                return -1;
-              }
-              return 0;
-            })
-            .map((card) => (
-              <li key={card.id} className="locationList__item">
+          {dataLocation.map((card) => (
+            <li key={card.id} className="locationList__item">
+              <Link to={`/locationdetail/${card.id}`}>
+                {" "}
                 <LocationCard card={card} />
-              </li>
-            ))}
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
-    </div>
+    </section>
   );
 }
 

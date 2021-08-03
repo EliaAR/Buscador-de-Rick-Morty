@@ -67,6 +67,21 @@ function DataLocationAPI(params = {}) {
     });
 }
 
+function DataSingleLocationAPI(id) {
+  const ENDPOINT = "https://rickandmortyapi.com/api/location/";
+  return fetch(ENDPOINT + id)
+    .then((response) => response.json())
+    .then((response) => {
+      return {
+        id: response.id,
+        name: response.name,
+        type: response.type,
+        dimension: response.dimension,
+        residents: response.residents,
+      };
+    });
+}
+
 function DataEpisodeAPI(params = {}) {
   const ENDPOINT = "https://rickandmortyapi.com/api/episode";
   const searchParams = new URLSearchParams();
@@ -112,5 +127,6 @@ export {
   DataSingleCharacterAPI,
   DataLocationAPI,
   DataEpisodeAPI,
+  DataSingleLocationAPI,
   DataSingleEpisodeAPI,
 };

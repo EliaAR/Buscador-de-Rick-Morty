@@ -4,6 +4,7 @@ import { CharacterPage } from "../Characters/CharacterPage";
 import { LocationPage } from "../Locations/LocationPage";
 import { EpisodePage } from "../Episodes/EpisodePage";
 import { CharacterDetail } from "../Characters/CharacterDetail";
+import { LocationDetail } from "../Locations/LocationDetail";
 import { EpisodeDetail } from "../Episodes/EpisodeDetail";
 import { ErrorRouteMsg } from "../ErrorRouteMsg/ErrorRouteMsg";
 import "./App.scss";
@@ -17,6 +18,7 @@ function App() {
         <Route path="/locationPage" exact component={LocationPage}></Route>
         <Route path="/episodePage" exact component={EpisodePage}></Route>
         <Route path="/characterdetail/:id" component={CharacterDetail} />
+        <Route path="/locationdetail/:id" component={LocationDetail} />
         <Route path="/episodedetail/:id" component={EpisodeDetail} />
         <Route path="" component={ErrorRouteMsg} />
       </Switch>

@@ -11,7 +11,7 @@ function Filter({
 }) {
   if (typeOfInput === "input") {
     return (
-      <div className="form__nameContainer">
+      <section className="form__nameContainer">
         <label htmlFor={id} className="form__label form__labelName">
           {textLabel}
         </label>
@@ -24,11 +24,11 @@ function Filter({
           value={value}
           onChange={onChangeInput}
         />
-      </div>
+      </section>
     );
   } else {
     return (
-      <div className="form__selectContainer">
+      <section className="form__selectContainer">
         <label htmlFor={id} className="form__label form__labelSelect">
           {textLabel}
         </label>
@@ -48,7 +48,7 @@ function Filter({
             </option>
           ))}
         </select>
-      </div>
+      </section>
     );
   }
 }
