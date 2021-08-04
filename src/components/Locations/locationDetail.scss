@@ -6,7 +6,6 @@
   background-image: url(../../images/backgroundGreen.png);
   background-size: 250px;
   background-repeat: repeat;
-  text-align: center;
   font-family: "Bubblegum Sans", cursive;
 
   &__linkContainer {
@@ -42,6 +41,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: rgba(53, 141, 158, 0.8);
+    text-align: center;
     color: rgba(23, 22, 22, 0.95);
     font-size: 20px;
     text-transform: uppercase;
