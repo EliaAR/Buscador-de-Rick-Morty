@@ -79,10 +79,9 @@ function EpisodeDetail() {
               <h3 className="episodeDetail__tittle">Personajes que aparecen</h3>
               <ul className="episodeDetail__episodeList">
                 {charactersForTheEpisode.map((character) => (
-                  <li className="episodeDetail__episodeOne">
+                  <li className="episodeDetail__episodeOne" key={character.id}>
                     <Link
                       to={`/characterdetail/${character.id}`}
-                      key={character.id}
                       className="episodeDetail__episodeLink"
                     >
                       <img

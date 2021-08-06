@@ -107,11 +107,14 @@ function CharacterDetail() {
               </h3>
               <ul className="characterDetail__episodeList">
                 {episodesForTheCharacter.map((episode) => (
-                  <Link to={`/episodedetail/${episode.id}`} key={episode.id}>
-                    <li className="characterDetail__episodeOne">
+                  <li className="characterDetail__episodeOne" key={episode.id}>
+                    <Link
+                      to={`/episodedetail/${episode.id}`}
+                      className="characterDetail__episodeLink"
+                    >
                       <strong>{episode.episode}</strong> <em>{episode.name}</em>
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </article>

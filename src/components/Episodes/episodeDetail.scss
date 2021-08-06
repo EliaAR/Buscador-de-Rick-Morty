@@ -1,27 +1,10 @@
 @import "../Common/mixin";
 
 .episodeDetail {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // min-height: 70vh;
-  // background-image: url(../../images/backgroundGreen.png);
-  // background-size: 250px;
-  // background-repeat: repeat;
-  // font-family: "Bubblegum Sans", cursive;
-  @include detail(url(../../images/backgroundGreen.png));
+  @include detail;
 
   &__linkContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 22px;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-left: 0;
-    color: #c9ddc2;
-    font-family: "Fresca", sans-serif;
-    font-size: 17px;
+    @include detailLinkContainer;
   }
 
   &__cardContainer {
@@ -63,33 +46,16 @@
   }
 
   &__tittle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-    background-color: black;
-    border: 1px solid black;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    font-size: 16px;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: #777676;
+    @include tittleDetail;
   }
 
   &__episodeList {
+    @include listDetail;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
-    margin-bottom: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    color: #777676;
-    font-family: "Bubblegum Sans", cursive;
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+    padding: 10px 5px;
   }
 
   &__episodeLink {
@@ -107,29 +73,15 @@
   }
 
   &__errorMsg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-    background-image: url(../../images/Rick&MortyPersonaje.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include errorMsgDetail;
   }
 
   &__pError {
-    background-color: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    font-size: 40px;
-    font-family: "Creepster", cursive;
-    text-transform: uppercase;
+    @include pErrorDetail;
   }
 
   &__loading {
-    min-height: 70vh;
-    background-image: url(../../images/loading.png);
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include loadingDetail;
   }
 
   @media (min-width: 768px) {
@@ -146,16 +98,22 @@
     &__name {
       font-size: 27px;
     }
+    &__tittle {
+      height: 30px;
+      font-size: 25px;
+    }
     &__episodeList {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     &__paragraph,
-    &__tittle,
     &__episodeOne {
       font-size: 20px;
+    }
+    &__episodeImg {
+      width: 80px;
     }
     &__errorMsg {
       background-size: 650px;

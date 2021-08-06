@@ -1,24 +1,10 @@
+@import "../Common/mixin";
+
 .characterDetail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 70vh;
-  background-image: url(../../images/backgroundGreen.png);
-  background-size: 250px;
-  background-repeat: repeat;
-  font-family: "Bubblegum Sans", cursive;
+  @include detail;
 
   &__linkContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 27px;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-left: 0;
-    color: #c9ddc2;
-    font-family: "Fresca", sans-serif;
-    font-size: 17px;
+    @include detailLinkContainer;
   }
 
   &__cardContainer {
@@ -53,7 +39,6 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     color: #777676;
-    font-family: "Bubblegum Sans", cursive;
     text-indent: 10px;
   }
 
@@ -65,7 +50,6 @@
     position: relative;
     background-color: black;
     color: #777676;
-    font-family: "Bubblegum Sans", cursive;
     font-size: 20px;
   }
 
@@ -78,61 +62,33 @@
   }
 
   &__tittle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    height: 25px;
-    background-color: black;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    color: #777676;
-    font-family: "Bubblegum Sans", cursive;
-    font-size: 20px;
-    font-weight: normal;
+    @include tittleDetail;
   }
 
   &__episodeList {
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.55);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    color: #777676;
-    font-family: "Bubblegum Sans", cursive;
+    @include listDetail;
   }
 
   &__episodeOne {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  &__episodeLink {
     text-decoration: none;
     color: #8f8e8e;
   }
 
   &__errorMsg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-    background-image: url(../../images/Rick&MortyPersonaje.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include errorMsgDetail;
   }
 
   &__pError {
-    background-color: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    font-size: 40px;
-    font-family: "Creepster", cursive;
-    text-transform: uppercase;
+    @include pErrorDetail;
   }
 
   &__loading {
-    min-height: 70vh;
-    background-image: url(../../images/loading.png);
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include loadingDetail;
   }
 
   @media (min-width: 768px) {
