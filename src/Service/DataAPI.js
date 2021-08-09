@@ -3,7 +3,7 @@ function DataCharacterAPI(params = {}) {
   const searchParams = new URLSearchParams();
   for (let fieldName in params) {
     if (params[fieldName]) {
-      console.log(params[fieldName]);
+      // console.log(params[fieldName]);
       searchParams.append(fieldName, params[fieldName]);
     }
   }

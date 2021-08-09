@@ -30,15 +30,14 @@ function CharacterList({
       ) : (
         <ul className="characterList__container">
           {data.map((card) => (
-            <Link
-              to={`/characterdetail/${card.id}`}
-              key={card.id}
-              className="characterList__link"
-            >
-              <li className="characterList__item">
+            <li className="characterList__item" key={card.id}>
+              <Link
+                to={`/characterdetail/${card.id}`}
+                className="characterList__link"
+              >
                 <CharacterCard card={card} />
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
       )}
