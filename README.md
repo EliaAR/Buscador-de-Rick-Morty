@@ -1,29 +1,47 @@
-El proyecto consiste en el desarrollo de una apliación de búsqueda sobre la serie Rick y Morty a través de la la API https://rickandmortyapi.com/ e implementada en JavaScript/React.
+# El Mejorado Buscador de Rick y Morty
 
-Funcionalidades:
+Échale un ojo a mi APP en https://eliaar.github.io/Full-API-Rick-and-Morty-React-implementation/
 
-- Obtención listado:
-  - Ésto se hará a través de la función fetch que recogerá datos del Endpoint de la API (https://rickandmortyapi.com/api/character)
-  - Esta solicitud se realiza
-- Filtrado de los personajes:
-  - Por nombre:
-    - Para que la usuaria pueda realizar la búsqueda/filtrado, se ha introducido un campo de texto donde podrá introducir el nombre
-    - A medida que vaya escribiendo, irá realizando nuevas llamadas a la API
-  - Por especie y por estado: :
-    - Se realiza a través de los datos de la primera llamada a la API
-    - En esta ocasión se usan etiquetas tipo select
-- Sistema de rutas
-  - Se realiza a través de la librería React Router
-  - Estructuración:
-    - Página principal: aparecerá un listado de personajes de Rick y Morty. Éste podrá ser completo o filtrado (en caso de realizada alguna búsqueda)
-    - Páginas secundarias, mostrarán los detalles de un personaje concreto al hacer click en alguno de los que aparezcan en el listado
-    - Componente de error: se introduce un componente como ruta de error si se produce algún fallo tanto en la ruta de la págiuna principal como secundaria
-- Otros:
-  - Aparición de mensajes de aviso cuando:
-    - Se busque por un personaje y no haya ninguno que coincida con dicho texto
-      - Esto se consigue al introducir un nuevo estado que se setea con el cath de la llamada a la API
-    - Se navegue a una URL de personaje inexistente como por ejemplo http://localhost:3000/#/detail/12345
-  - Al entrar en el detalle de un personaje y a continuación pulsar atrás, el campo de texto se muestra el texto que tenía anteriormente
-  - Mostrar detalles del personaje mediante iconos, en concreto la especie y el estatus
-  - El listado de personajes aparece ordenado alfabéticamente por nombre
-  - Se ha usado un sistema de LocalStorage para mantener los campos de filtrado
+El proyecto consiste en el desarrollo de una aplicación de búsqueda sobre la serie Rick y Morty a través de la la API https://rickandmortyapi.com/ e implementada en JavaScript/React.
+
+## Funcionalidades
+
+### Búsquedas
+
+- Por personaje: se podrá filtrar por nombre, especie y estado
+- Por localización: por tipo y dimensión
+- Por episodio: por nombre y número
+
+### Paginación
+
+Se ha creado un componente reusable para las distintas páginas de búsqueda que permite al usuario navegar facilmente por los resultados
+
+### Obtención de datos
+
+Esto se realiza mediante funciones fetch que recogerán datos de distintos Endpoints:
+
+- Llamadas a la API para filtrado de las distintas búsquedas usando la interfaz URLSearchParams para facilitar la adición de nuevos parámetros a las llamadas
+- Llamadas a la API para conseguir información individualizada de un personaje, localización o episodio en base a un id proporcionado en la URL
+- Llamadas a la API para obtener datos relacionados: dado la estructura de datos provista por la API, es necesario hacer sucesivas llamadas para recoger la información relaccionada de cada personaje, localización o episodio en las páginas de detalle
+
+### Sistema de rutas
+
+- Se realiza a través de la librería React Router
+- Estructuración:
+  - Homepage: contiene enlaces para acceder a las tres páginas de búsqueda
+  - Páginas de búsqueda: una por cada tipo de búsqueda. En cada una de ellas aparece un listado (que podrá ser completo o filtrado) y la paginación (que variará según los resultados del filtrado)
+  - Páginas de detalle: se muestran más detalles que en el listado de la página de búsqueda; así como información y enlaces a otras páginas de detalle relacionadas
+  - Componente de error: se introduce un componente para gestionar las rutas inexistentes
+
+### Mejora en experiancia de usuario (UX)
+
+- Al entrar en una página de detalle y, a continuación pulsar atrás, el campo de texto contendrá el texto que tenía anteriormente
+- Links para poder navegar cómodamente por toda la app
+- Mostrar detalles del personaje mediante iconos, en concreto la especie y el estatus
+- Se ha usado un sistema de LocalStorage para mantener los campos de filtrado
+- Mensaje de loading, cuando se accede a la páginas de detalle, si el navegador tarda en cargar
+
+### Manejo de errores
+
+- Cuando se busque por un personaje, localización o episodio y no haya ninguno que coincida con dicho texto
+- Cuando se navegue a una URL de personaje inexistente
