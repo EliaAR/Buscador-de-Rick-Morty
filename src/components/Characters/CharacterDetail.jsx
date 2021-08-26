@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Header } from "../Common/Header";
+import { Title } from "../Common/Title";
 import { SpeciesIcons, StatusIcons } from "../Common/Icons";
 import { Footer } from "../Common/Footer";
 import { GetArrayId } from "../../utils/indexUtils";
@@ -59,12 +60,12 @@ function CharacterDetail() {
           </Link>
           <button
             onClick={goToPreviousPath}
-            className="characterDetail__linkContainer"
+            className="characterDetail__linkContainer characterDetail__linkBack"
           >
             <i className="fas fa-angle-double-left"></i>
             Volver atrás
           </button>
-
+          <Title textTitle="Detalles de personaje" />
           <section className="characterDetail__cardContainer">
             <article className="characterDetail__card">
               <section className="characterDetail__containerImg">

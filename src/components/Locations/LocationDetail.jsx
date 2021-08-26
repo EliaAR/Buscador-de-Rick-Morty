@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Header } from "../Common/Header";
+import { Title } from "../Common/Title";
 import { Footer } from "../Common/Footer";
 import { GetArrayId } from "../../utils/indexUtils";
 import {
@@ -58,11 +59,12 @@ function LocationDetail() {
           </Link>
           <button
             onClick={goToPreviousPath}
-            className="locationDetail__linkContainer"
+            className="locationDetail__linkContainer characterDetail__linkBack"
           >
             <i className="fas fa-angle-double-left"></i>
             Volver atrás
           </button>
+          <Title textTitle="Detalles de localización" />
           <section className="locationDetail__cardContainer">
             <article className="locationDetail__card">
               <p className="locationDetail__name"> {singleLocation.name} </p>

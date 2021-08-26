@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { DataEpisodeAPI } from "../../Service/DataAPI";
 import { SetLocalStorage, GetLocalStorage } from "../../Service/LocalStorage";
 import { Header } from "../Common/Header";
+import { Title } from "../Common/Title";
 import { EpisodeFilter } from "./EpisodeFilter";
 import { Sumary } from "../Common/Sumary";
 import { EpisodeList } from "./EpisodeList";
@@ -55,7 +56,7 @@ function EpisodePage() {
           <i className="fas fa-angle-double-left"></i>
           Volver a la página principal
         </Link>
-        <p className="mainEpisode__paragraph">Búsqueda de episodios</p>
+        <Title textTitle="Búsqueda de episodios" />
         <EpisodeFilter
           searchValueEpisode={searchValueEpisode}
           onChangeSearchValueEpisode={(evt) => {

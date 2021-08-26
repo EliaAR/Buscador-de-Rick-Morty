@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { DataLocationAPI } from "../../Service/DataAPI";
 import { SetLocalStorage, GetLocalStorage } from "../../Service/LocalStorage";
 import { Header } from "../Common/Header";
+import { Title } from "../Common/Title";
 import { LocationFilters } from "./LocationFilters";
 import { Sumary } from "../Common/Sumary";
 import { LocationList } from "./LocationList";
@@ -65,7 +66,7 @@ function LocationPage() {
           <i className="fas fa-angle-double-left"> </i>
           Volver a la página principal
         </Link>
-        <p className="mainLocation__paragraph">Búsqueda de localizaciones</p>
+        <Title textTitle="Búsqueda de localizaciones" />
         <LocationFilters
           searchValueLocation={searchValueLocation}
           onChangesearchValueLocation={(evt) => {

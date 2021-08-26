@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { DataCharacterAPI } from "../../Service/DataAPI";
 import { SetLocalStorage, GetLocalStorage } from "../../Service/LocalStorage";
 import { Header } from "../Common/Header";
+import { Title } from "../Common/Title";
 import { CharacterFilters } from "./CharacterFilters";
 import { Sumary } from "../Common/Sumary";
 import { CharacterList } from "./CharacterList";
@@ -55,7 +56,7 @@ function CharacterPage() {
           <i className="fas fa-angle-double-left"></i>
           Volver a la página principal
         </Link>
-        <p className="mainCharacter__paragraph">Búsqueda de personajes</p>
+        <Title textTitle="Búsqueda de personajes" />
         <CharacterFilters
           searchValueName={searchValueName}
           onChangeSearchValueName={(evt) => {
@@ -105,7 +106,6 @@ function CharacterPage() {
             }}
           />
         ) : null}
-
         <CharacterList
           data={data}
           searchValueName={searchValueName}

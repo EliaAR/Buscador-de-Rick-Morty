@@ -7,6 +7,10 @@
     @include detailLinkContainer;
   }
 
+  &__linkBack {
+    margin-bottom: 10px;
+  }
+
   &__cardContainer {
     display: flex;
     flex-direction: column;

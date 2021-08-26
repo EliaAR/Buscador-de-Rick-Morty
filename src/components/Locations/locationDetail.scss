@@ -7,6 +7,10 @@
     @include detailLinkContainer;
   }
 
+  &__linkBack {
+    margin-bottom: 10px;
+  }
+
   &__cardContainer {
     display: flex;
     flex-direction: column;
@@ -69,7 +73,7 @@
   }
 
   &__locationImg {
-    width: 50px;
+    width: 80px;
     border: 1px solid black;
     border-radius: 5px;
   }
@@ -124,9 +128,6 @@
     &__paragraph,
     &__locationOne {
       font-size: 20px;
-    }
-    &__locationImg {
-      width: 80px;
     }
     &__locationParagraph {
       width: 500px;

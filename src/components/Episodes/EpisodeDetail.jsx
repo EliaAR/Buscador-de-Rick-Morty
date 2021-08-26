@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Header } from "../Common/Header";
+import { Title } from "../Common/Title";
 import { Footer } from "../Common/Footer";
 import { GetArrayId } from "../../utils/indexUtils";
 import {
@@ -58,11 +59,12 @@ function EpisodeDetail() {
           </Link>
           <button
             onClick={goToPreviousPath}
-            className="episodeDetail__linkContainer"
+            className="episodeDetail__linkContainer characterDetail__linkBack"
           >
             <i className="fas fa-angle-double-left"></i>
             Volver atrás
           </button>
+          <Title textTitle="Detalles de episodio" />
           <section className="episodeDetail__cardContainer">
             <article className="episodeDetail__card">
               <p className="episodeDetail__name"> {singleEpisode.name} </p>
