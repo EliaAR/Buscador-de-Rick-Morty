@@ -3,12 +3,40 @@
   background-color: black;
   border-bottom: 1px solid #a5ff81;
 
+  &__menuContainer {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: start;
+  }
+
+  &__menuNav {
+    color: rgb(58, 178, 201);
+    text-shadow: 3px 2px 3px #a5ff81;
+  }
+
+  &__menuUl {
+    background-color: #182c21;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    line-height: 20px;
+  }
+
+  &__menuLink {
+    color: #bcc2ba;
+    text-shadow: none;
+    font-family: "Kalam", cursive;
+  }
+
   &__paragraph {
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
     font-family: "Fontdiner Swanky", cursive;
-    font-size: 20px;
     color: #a5ff81;
     text-shadow: 3px 2px 3px rgb(58, 178, 201);
   }
@@ -20,6 +48,12 @@
   }
 
   @media (min-width: 768px) {
+    &__menuNav {
+      font-size: 20px;
+    }
+    &__menuUl {
+      line-height: 25px;
+    }
     &__paragraph {
       padding-top: 10px;
       padding-bottom: 10px;
