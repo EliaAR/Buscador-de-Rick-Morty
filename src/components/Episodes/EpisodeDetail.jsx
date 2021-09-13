@@ -77,7 +77,7 @@ function EpisodeDetail() {
                 </p>
               </div>
             </article>
-            <article>
+            <article className="episodeDetail__characters">
               <h3 className="episodeDetail__tittle">Personajes que aparecen</h3>
               <ul className="episodeDetail__episodeList">
                 {charactersForTheEpisode.map((character) => (

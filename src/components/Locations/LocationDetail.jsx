@@ -77,7 +77,7 @@ function LocationDetail() {
                 </p>
               </div>
             </article>
-            <article>
+            <article className="locationDetail__characters">
               <h3 className="locationDetail__tittle">
                 Personajes que residen aquí
               </h3>
