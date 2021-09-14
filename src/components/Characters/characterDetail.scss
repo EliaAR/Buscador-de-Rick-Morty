@@ -49,10 +49,11 @@
   &__paragraphContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 5px;
     position: relative;
     background-color: black;
+    text-align: center;
     color: #777676;
     font-size: 20px;
   }

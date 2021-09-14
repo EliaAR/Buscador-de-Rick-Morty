@@ -1,7 +1,7 @@
 .icon {
   &__species {
-    position: absolute;
-    margin-left: -215px;
+    padding-left: 10px;
+    order: -1;
     color: #777676;
   }
   &__poopy {
@@ -9,25 +9,18 @@
     width: 15px;
   }
   &__cronenberg {
-    margin-left: -200px;
     height: 20px;
   }
   &__status {
-    position: absolute;
-    margin-right: -210px;
+    padding-right: 10px;
     color: #777676;
   }
 
   @media (min-width: 768px) {
     &__species {
-      margin-right: 30px;
       font-size: 20px;
     }
-    &__cronenberg {
-      margin-left: -250px;
-    }
     &__status {
-      margin-right: -250px;
       font-size: 20px;
     }
   }
