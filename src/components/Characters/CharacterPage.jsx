@@ -76,7 +76,10 @@ function CharacterPage() {
             SetLocalStorage("selectStatus", evt.currentTarget.value);
             setCurrentPage(1);
           }}
-          onClickSubmit={() => setCallAPI(true)}
+          onSubmitButton={(evt) => {
+            setCallAPI(true);
+            evt.preventDefault();
+          }}
           onClickReset={() => {
             setSearchValueName("");
             SetLocalStorage("searchValueName", "");
@@ -85,6 +88,7 @@ function CharacterPage() {
             setSelectStatus("");
             SetLocalStorage("selectStatus", "");
             setCurrentPage(1);
+            SetLocalStorage("pages", 1);
             setCallAPI(true);
           }}
         />

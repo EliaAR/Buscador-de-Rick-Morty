@@ -26,11 +26,11 @@ function CharacterFilters({
   onChangeSelectSpecies,
   selectStatus,
   onChangeSelectStatus,
-  onClickSubmit,
+  onSubmitButton,
   onClickReset,
 }) {
   return (
-    <form className="form" onSubmit={(evt) => evt.preventDefault()}>
+    <form className="form" onSubmit={onSubmitButton}>
       <Filter
         typeOfInput="input"
         id="name"
@@ -58,7 +58,7 @@ function CharacterFilters({
         options={allStatus}
       />
       <div>
-        <Submit onClickSubmit={onClickSubmit} />
+        <Submit />
         <Reset onClickReset={onClickReset} />
       </div>
     </form>
