@@ -12,7 +12,7 @@ function CharacterList({
   selectStatus,
 }) {
   return (
-    <section className="characterList">
+    <section className={error ? "characterList__error" : "characterList"}>
       {error ? (
         <article className="characterList__paragraph">
           <img

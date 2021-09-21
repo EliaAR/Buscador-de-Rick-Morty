@@ -1,10 +1,7 @@
 .mainLocation {
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
   min-height: 70vh;
-  background-image: url(../../images/rick&mortyComic.png);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  background-size: 300px;
 
   &__link {
     display: flex;
@@ -28,8 +25,6 @@
   }
 
   @media (min-width: 768px) {
-    background-position: top 550px left 50%;
-    background-size: 400px;
     &__link {
       height: 40px;
       font-size: 20px;
@@ -37,10 +32,6 @@
     &__paragraph {
       font-size: 45px;
     }
-  }
-
-  @media (min-width: 1280px) {
-    background-position: top 330px left 50%;
   }
 
   .submit__button {

@@ -1,5 +1,6 @@
 .mainEpisode {
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
   min-height: 70vh;
   background-image: url(../../images/facesGreen.png);
   background-repeat: repeat;

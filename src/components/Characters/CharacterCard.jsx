@@ -10,10 +10,11 @@ function CharacterCard({ card }) {
         title={card.name}
         className="cardCharacter__img"
       />{" "}
-      <p className="cardCharacter__container">
-        {card.name} <SpeciesIcons species={card.species} />{" "}
+      <article className="cardCharacter__container">
+        <p className="cardCharacter__name">{card.name}</p>{" "}
+        <SpeciesIcons species={card.species} />{" "}
         <StatusIcons status={card.status} />
-      </p>
+      </article>
     </section>
   );
 }

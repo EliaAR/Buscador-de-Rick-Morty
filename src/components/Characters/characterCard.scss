@@ -12,7 +12,6 @@
     position: relative;
     top: -20px;
     height: 25px;
-    width: 250px;
     background-color: black;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -20,13 +19,15 @@
     font-family: "Bubblegum Sans", cursive;
   }
 
+  &__name {
+    max-width: 165px;
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+
   @media (min-width: 768px) {
-    &__img {
-      width: 300px;
-    }
     &__container {
       height: 30px;
-      width: 300px;
       font-size: 20px;
     }
   }

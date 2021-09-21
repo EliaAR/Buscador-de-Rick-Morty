@@ -11,7 +11,7 @@ function LocationList({
   selectDimension,
 }) {
   return (
-    <section className="locationList">
+    <section className={error ? "locationList__error" : "locationList"}>
       {error ? (
         <article className="locationList__paragraph">
           <p className="locationList__searchs">

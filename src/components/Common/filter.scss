@@ -1,5 +1,8 @@
 .form {
-  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   padding-bottom: 8px;
   background-color: rgba(0, 0, 0, 0.55);
 
@@ -22,7 +25,6 @@
   }
 
   &__select {
-    width: 270px;
     height: 21px;
   }
 
@@ -42,14 +44,12 @@
   }
 
   &__label {
-    width: 270px;
     color: #c9ddc2;
     text-align: center;
     font-family: "Kalam", cursive;
   }
 
   &__input {
-    margin-bottom: 8px;
     width: 270px;
     background: linear-gradient(to bottom, #3b634a 0%, #3b634a 100%);
     background-image: linear-gradient(
@@ -69,7 +69,6 @@
 
   @media (min-width: 768px) {
     &__label {
-      width: 450px;
       font-size: 25px;
     }
     &__input {
@@ -80,13 +79,9 @@
   }
 
   @media (min-width: 1280px) {
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-bottom: 15px;
-    &__label {
-      width: 420px;
-    }
     &__input {
       width: 440px;
     }

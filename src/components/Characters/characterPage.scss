@@ -1,5 +1,6 @@
 .mainCharacter {
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
   min-height: 70vh;
   background-image: url(../../images/texturaRick&Morty.png);
   background-repeat: repeat;

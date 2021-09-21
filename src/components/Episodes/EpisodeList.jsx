@@ -11,7 +11,7 @@ function EpisodeList({
   dataEpisode,
 }) {
   return (
-    <section className="episodeList">
+    <section className={error ? "episodeList__error" : "episodeList"}>
       {error ? (
         <article className="episodeList__paragraph">
           <img
