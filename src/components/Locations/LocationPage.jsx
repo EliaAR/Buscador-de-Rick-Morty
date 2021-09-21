@@ -86,7 +86,10 @@ function LocationPage() {
             SetLocalStorage("selectDimension", evt.currentTarget.value);
             setCurrentPageLocation(1);
           }}
-          onClickSubmit={() => setCallAPI(true)}
+          onSubmitButton={(evt) => {
+            setCallAPI(true);
+            evt.preventDefault();
+          }}
           onClickReset={() => {
             setSearchValueLocation("");
             SetLocalStorage("setSearchValueLocation", "");
@@ -95,6 +98,7 @@ function LocationPage() {
             setSelectDimension("");
             SetLocalStorage("selectDimension", "");
             setCurrentPageLocation(1);
+            SetLocalStorage("pagesLocation", 1);
             setCallAPI(true);
           }}
         />

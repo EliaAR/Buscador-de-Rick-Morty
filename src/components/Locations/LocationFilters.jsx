@@ -87,14 +87,11 @@ function LocationFilters({
   onChangeSelectType,
   selectDimension,
   onChangeSelectDimension,
-  onClickSubmit,
+  onSubmitButton,
   onClickReset,
 }) {
   return (
-    <form
-      className="form formLocation"
-      onSubmit={(evt) => evt.preventDefault()}
-    >
+    <form className="form formLocation" onSubmit={onSubmitButton}>
       <Filter
         typeOfInput="input"
         id="name"
@@ -122,7 +119,7 @@ function LocationFilters({
         options={allDimensions}
       />
       <div>
-        <Submit onClickSubmit={onClickSubmit} />
+        <Submit />
         <Reset onClickReset={onClickReset} />
       </div>
     </form>

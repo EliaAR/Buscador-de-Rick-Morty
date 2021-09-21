@@ -70,13 +70,17 @@ function EpisodePage() {
             SetLocalStorage("selectEpisode", evt.currentTarget.value);
             setCurrentPageEpisode(1);
           }}
-          onClickSubmit={() => setCallAPI(true)}
+          onSubmitButton={(evt) => {
+            setCallAPI(true);
+            evt.preventDefault();
+          }}
           onClickReset={() => {
             setSearchValueEpisode("");
             SetLocalStorage("setSearchValueEpisode", "");
             setSelectEpisode("");
             SetLocalStorage("selectEpisode", "");
             setCurrentPageEpisode(1);
+            SetLocalStorage("pagesEpisode", 1);
             setCallAPI(true);
           }}
         />
