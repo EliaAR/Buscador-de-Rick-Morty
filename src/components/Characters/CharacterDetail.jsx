@@ -30,7 +30,7 @@ function CharacterDetail() {
       .then((character) => {
         setSingleCharacter(character);
       })
-      .catch((error) => {
+      .catch(() => {
         setError(true);
       });
   }, [id]);

@@ -44,7 +44,7 @@ function EpisodePage() {
           SetLocalStorage("episodeArray", episodeArray);
           SetLocalStorage("pagesEpisode", totalPages);
         })
-        .catch((error) => setError(true));
+        .catch(() => setError(true));
     }
   }, [searchValueEpisode, selectEpisode, currentPageEpisode, callAPI]);
 

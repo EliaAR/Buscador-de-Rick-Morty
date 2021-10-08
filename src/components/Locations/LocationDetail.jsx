@@ -29,7 +29,7 @@ function LocationDetail() {
       .then((location) => {
         setSingleLocation(location);
       })
-      .catch((error) => {
+      .catch(() => {
         setError(true);
       });
   }, [id]);

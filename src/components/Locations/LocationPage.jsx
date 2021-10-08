@@ -48,7 +48,7 @@ function LocationPage() {
           SetLocalStorage("locationArray", locationArray);
           SetLocalStorage("pagesLocation", totalPages);
         })
-        .catch((error) => setError(true));
+        .catch(() => setError(true));
     }
   }, [
     searchValueLocation,

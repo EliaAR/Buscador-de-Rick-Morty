@@ -44,7 +44,7 @@ function CharacterPage() {
           SetLocalStorage("characterArray", characterArray);
           SetLocalStorage("pages", totalPages);
         })
-        .catch((error) => setError(true));
+        .catch(() => setError(true));
     }
   }, [searchValueName, selectSpecies, selectStatus, currentPage, callAPI]);
 

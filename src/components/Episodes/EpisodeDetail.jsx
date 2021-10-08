@@ -29,7 +29,7 @@ function EpisodeDetail() {
       .then((episode) => {
         setSingleEpisode(episode);
       })
-      .catch((error) => {
+      .catch(() => {
         setError(true);
       });
   }, [id]);
